@@ -1,24 +1,26 @@
-# README
+# Sebastian Valdez Profile Site
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## This is a site about my interests, projects and resume.
 
-Things you may want to cover:
 
-* Ruby version
+## Features:
+- Single page app
+- Contact me messgage form
+- Has github projects lists
+- Has about me
+- Has Hobbies
+- Has Resume
 
-* System dependencies
+## UI:
 
-* Configuration
+- Responsive for all devices
+- Minial style
 
-* Database creation
 
-* Database initialization
+## TODO:
 
-* How to run the test suite
+- Fill up welcome page with more info
+- create message form
+- Google analytics
+- Responsive design
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
