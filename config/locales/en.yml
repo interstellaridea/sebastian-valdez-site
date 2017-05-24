@@ -32,6 +32,6 @@
 en:
   hello: "Hello world"
 # sets subject for MeassageMailer#contact_me
-  message_mailer:
-    contact_me:
-      subject: "Message from sebastian-valdez.com"
+  # message_mailer:
+  #   contact_me:
+  #     subject: "Message from sebastian-valdez.com"

@@ -1,4 +1,4 @@
-
+ActionMailer::Base.default_options = {from: 'no-reply@sebastian-valdez.com'}
 ActionMailer::Base.smtp_settings = {
   address: "smtp.gmail.com",
   port: 587,
