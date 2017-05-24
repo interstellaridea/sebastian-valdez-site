@@ -11,13 +11,14 @@ RSpec.feature 'Contact Form', :type => :feature do
 	end
 
 	scenario 'should have successful POST' do
-		visit '/contact-me'
-		fill_in 'Name', with: 'Joe Shmoe'
-		fill_in 'Email', with: 'joe@gmail.com'
-		fill_in 'Body', with: 'Hey id like to meet you.'
-		click_button 'Send'
+		expect do
+			visit '/contact-me'
+			fill_in 'Name', with: 'Joe Shmoe'
+			fill_in 'Email', with: 'joe@gmail.com'
+			fill_in 'Body', with: 'Hey id like to meet you.'
+			click_button 'Send'
+		end.to change{ActionMailer::Base.deliveries.size}.from(0).to(1)
 
-		#assert redirection
 		expect(page.current_path).to eq root_path
 		expect(page).to have_content('Your message was successfully sent!')
 	end
