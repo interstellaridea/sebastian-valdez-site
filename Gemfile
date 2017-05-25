@@ -35,6 +35,13 @@ gem 'jbuilder', '~> 2.5'
 
 # Added by me
 gem "font-awesome-rails"
+gem 'bootstrap', '~> 4.0.0.alpha3'
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-tether', '>= 1.3.3'
+end
+
+gem 'jquery-rails'
 
 
 
