@@ -1,4 +1,6 @@
-
+<% if flash[:notice] %>
+	<div class="notice"><%= flash[:notice] %></div>
+<% end %>
 
 <%= image_tag("profile_pic") %>
 <h1>Sebastian Valdez</h1>
@@ -7,7 +9,7 @@
 
 <h2>About me</h2>
 
-<h2>Contact me</h2>
+<%= link_to 'Contact me', new_message_path %><br>
 <%= fa_icon 'github', text: 'Github Account' %>
 
 

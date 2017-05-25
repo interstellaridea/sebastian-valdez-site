@@ -10,11 +10,15 @@
 - Has about me
 - Has Hobbies
 - Has Resume
+- Able to down load pdf of resume
 
 ## UI:
 
 - Responsive for all devices
 - Minial style
+- Favion
+- Custom Font
+
 
 
 ## TODO:
@@ -23,4 +27,5 @@
 - create message form
 - Google analytics
 - Responsive design
+- X Add Rspec
 
