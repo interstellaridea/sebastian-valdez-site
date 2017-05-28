@@ -2,30 +2,26 @@
 
 ## This is a site about my interests, projects and resume.
 
-
 ## Features:
-- Single page app
-- Contact me messgage form
-- Has github projects lists
-- Has about me
+
+- X Contact me messgage form
+- X Has github projects lists
+- X Has about me
 - Has Hobbies
 - Has Resume
 - Able to down load pdf of resume
 
 ## UI:
 
-- Responsive for all devices
-- Minial style
-- Favion
-- Custom Font
-
-
+- X Responsive for all devices
+- X Favion
+- X Custom Font
 
 ## TODO:
 
-- Fill up welcome page with more info
-- create message form
+- X Fill up welcome page with more info
+- X Create message form
 - Google analytics
-- Responsive design
+- X Responsive design
 - X Add Rspec
 
