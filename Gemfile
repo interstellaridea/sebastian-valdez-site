@@ -42,7 +42,7 @@ source 'https://rails-assets.org' do
 end
 
 gem 'jquery-rails'
-
+gem 'google-analytics-rails', '~> 1.1'
 
 
 group :development, :test do

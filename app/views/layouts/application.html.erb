@@ -5,7 +5,7 @@
     <title>SebastianValdezSite</title>
     <%= favicon_link_tag 'favicon.ico' %>
     <%= csrf_meta_tags %>
-
+		<%= analytics_init if GoogleAnalytics.valid_tracker? %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
