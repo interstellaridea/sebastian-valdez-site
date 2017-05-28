@@ -5,7 +5,7 @@ Rails.application.configure do
   config.cache_classes = true
 
   # Google Analytics
-  GA.tracker = 'UA-100038965-1'
+  GA.tracker = ENV['G_ANALYTICS']
 
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers
