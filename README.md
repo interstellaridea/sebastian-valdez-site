@@ -21,7 +21,7 @@
 
 - X Fill up welcome page with more info
 - X Create message form
-- Google analytics
+- X Google analytics
 - X Responsive design
 - X Add Rspec
 
