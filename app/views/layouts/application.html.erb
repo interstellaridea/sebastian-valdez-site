@@ -1,14 +1,33 @@
 <!DOCTYPE html>
 <html>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
   <head>
     <title>SebastianValdezSite</title>
+    <%= favicon_link_tag 'favicon.ico' %>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <%= yield %>
-  </body>
+	<body>
+
+		<div class="container">
+			<div id="wrapper" class="row">
+				<div class="col-xs-6 col-md-5 col-lg-4">
+					<%= image_tag("profile_pic",
+					alt: "Me", id: "profile-pic", class: 'img-fluid') %>
+				<h2 id="profile-name"> Sebastian Valdez</h2>
+				</div>
+				<div class="col-xs-6 col-md-7 col-lg-8">
+					<%= render 'shared/alerts' %>
+					<%= render 'shared/nav' %>
+						<%= yield %>
+				</div>
+			</div>
+			<hr style="border-bottom: 1px #fff solid;">
+
+		</div>
+
+	</body>
 </html>

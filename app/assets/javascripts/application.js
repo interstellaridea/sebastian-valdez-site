@@ -16,3 +16,24 @@
 //= require tether
 //= require bootstrap-sprockets
 //= require_tree .
+
+$(document).ready(function(){
+
+	// var about_me_txt = $('#about-me');
+	// about_me_txt.hide();
+
+	// $('#about-me-link').click(function(e){
+	// 	e.preventDefault();
+	// 	about_me_txt.toggle();
+	// });
+
+	// document.addEventListener('click', function(e){
+	// 	var targetElement = event.target || event.srcElement;
+	// 	console.log(targetElement.id);
+	// 	if(targetElement.id === 'about-me-link'){
+	// 		console.log('clicked!');
+	// 		targetElement.toggle();
+	// 	}
+	// });
+
+});

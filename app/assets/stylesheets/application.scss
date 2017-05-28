@@ -14,14 +14,39 @@
  */
 
 @import "bootstrap";
-
+@font-face {
+	font-family: 'Gotham-thin';
+	src:url(/fonts/GothamHTF-Thin.oft) format('otf');
+}
  body {
- 	background-color: #eaeaea;
+ 	background-color: #222;
+ 	color: #fff;
+ 	font-family: 'Gotham-thin';
  }
 
+ #wrapper {
+ 	margin-top: 15%;
+ }
+
+.custom-nav {
+		font-size: 30px;
+		a {
+			text-decoration: none;
+			color: #d3d3d3;
+		}
+		a:hover {
+			color: #c00;
+		}
+
+}
  #profile-pic {
- 	width: 55%;
+ 	margin-top: 30%;
  	border-radius: 100%;
+ }
+
+ #profile-name {
+ 	text-align: center;
+ 	padding-top: 10px;
  }
 
  #github-link {
@@ -44,5 +69,30 @@
  	}
  }
 
+ #contact-me {
+   margin: 9% 0 0 9%;
+ }
 
+@media screen and (max-width: 1199px) {
+	.custom-nav {
+		margin: 15px auto;
+		font-size: 20px;
+	}
 
+}
+@media screen and (max-width: 960px) {
+	.custom-nav {
+		margin: 15px auto;
+		font-size: 16px;
+	}
+	#contact-me {
+		margin: 0;
+	}
+
+}
+@media screen and (max-width: 765px) {
+	#profile-pic{
+		margin-top: 0;
+	}
+
+}
