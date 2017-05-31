@@ -7,7 +7,7 @@
 - X Contact me messgage form
 - X Has github projects lists
 - X Has about me
-- Has Hobbies
+- Lists Hobbies
 - Has Resume
 - Able to down load pdf of resume
 
@@ -19,9 +19,15 @@
 
 ## TODO:
 
+- Improve Responsive design
+- Fix RSpec tests
+- Implemenet better Errors
+- Implement better alerts
+- Adjust line-height for 'About me'
+- Add padding for text
+- Resume (Modal?)
+- Can download Resume
 - X Fill up welcome page with more info
 - X Create message form
 - X Google analytics
-- X Responsive design
-- X Add Rspec
 
