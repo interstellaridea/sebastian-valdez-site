@@ -1,3 +1,15 @@
+GIT
+  remote: https://github.com/frank184/sweet-alert-rails
+  revision: d72b35828a60f00a49cd0938017cea7b914d6ef8
+  specs:
+    sweet-alert (0.0.8)
+
+GIT
+  remote: https://github.com/humancopy/sweet-alert-rails-confirm
+  revision: 7fb307cd52600b5a6e49e0c8e4a43f75b7784fdf
+  specs:
+    sweet-alert-confirm (0.4.1)
+
 GEM
   remote: https://rubygems.org/
   remote: https://rails-assets.org/
@@ -240,6 +252,8 @@ DEPENDENCIES
   selenium-webdriver
   spring
   spring-watcher-listen (~> 2.0.0)
+  sweet-alert!
+  sweet-alert-confirm!
   turbolinks (~> 5)
   tzinfo-data
   uglifier (>= 1.3.0)
