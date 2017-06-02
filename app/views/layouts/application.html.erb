@@ -14,10 +14,11 @@
 
 <div class="container">
 	<div id="wrapper" class="row">
-		<div class="col-xs-6 col-md-5 col-lg-4">
+		<div id="left-col" class="col-xs-6 col-md-5 col-lg-4">
 			<%= image_tag("profile_pic",
 			alt: "Me", id: "profile-pic", class: 'img-fluid') %>
 			<h2 id="profile-name"> Sebastian Valdez</h2>
+			<%= link_to "Resume", download_resume_path, id: 'resume-download-btn' %>
 		</div>
 		<div class="col-xs-6 col-md-7 col-lg-8">
 			<%= render 'shared/alerts' %>

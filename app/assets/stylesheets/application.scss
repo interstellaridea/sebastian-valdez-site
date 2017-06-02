@@ -29,16 +29,20 @@
  	margin-top: 15%;
  }
 
+#left-col {
+	text-align: center;
+}
+
 .custom-nav {
 		font-size: 30px;
 		a {
 			text-decoration: none;
 			color: #d3d3d3;
+			transition: 0.25s all linear;
 		}
 		a:hover {
 			color: #00bfff;
 		}
-
 }
  #profile-pic {
  	margin-top: 30%;
@@ -46,8 +50,8 @@
  }
 
  #profile-name {
- 	text-align: center;
  	padding-top: 10px;
+ 	margin-bottom: 10px;
  }
 
  #github-link {
@@ -71,15 +75,29 @@
  }
 
  #contact-me {
-   margin: 9% 0 0 9%;
+	margin: 9% 0 0 9%;
  }
 
  .errors {
-    color: red;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 17px;
+	color: red;
+	font-weight: bold;
+	text-decoration: none;
+	font-size: 17px;
  }
+
+#resume-download-btn {
+	border: 1px solid #fff;
+	padding: 10px 25px;
+	color: #fff;
+	transition: 0.25s all linear;
+}
+
+#resume-download-btn:hover, #resume-download-btn:focus{
+	text-decoration: none;
+	color: #333;
+	background-color: #fff;
+	border: 1px solid #333;
+}
 
 @media screen and (max-width: 1199px) {
 	.custom-nav {
