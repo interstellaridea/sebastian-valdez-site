@@ -10,13 +10,13 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
 //= require sweet-alert
-//= require sweet-alert-confirm
+//= require jquery
 //= require jquery_ujs
 //= require turbolinks
 //= require tether
 //= require bootstrap-sprockets
+//= require sweet-alert-confirm
 //= require_tree .
 
 $(document).ready(function(){
@@ -48,8 +48,5 @@ $.rails.showConfirmationDialog = function(link){
     $.rails.confirmed(link);
   });
 };
-
-
-
 
 });
