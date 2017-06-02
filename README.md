@@ -8,8 +8,8 @@
 - X Has github projects lists
 - X Has about me
 - Lists Hobbies
-- Has Resume
-- Able to down load pdf of resume
+- X Has Resume
+- X Able to download pdf of resume
 
 ## UI:
 
