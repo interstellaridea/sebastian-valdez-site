@@ -11,6 +11,8 @@
 // about supported directives.
 //
 //= require jquery
+//= require sweet-alert
+//= require sweet-alert-confirm
 //= require jquery_ujs
 //= require turbolinks
 //= require tether
@@ -18,22 +20,36 @@
 //= require_tree .
 
 $(document).ready(function(){
+//Override the default confirm dialog by rails
+$.rails.allowAction = function(link){
+  if (link.data("confirm") == undefined){
+    return true;
+  }
+  $.rails.showConfirmationDialog(link);
+  return false;
+}
 
-	// var about_me_txt = $('#about-me');
-	// about_me_txt.hide();
+//User click confirm button
+$.rails.confirmed = function(link){
+  link.data("confirm", null);
+  link.trigger("click.rails");
+}
 
-	// $('#about-me-link').click(function(e){
-	// 	e.preventDefault();
-	// 	about_me_txt.toggle();
-	// });
+//Display the confirmation dialog
+$.rails.showConfirmationDialog = function(link){
+  var message = link.data("confirm");
+  swal({
+    title: message,
+    type: 'warning',
+    confirmButtonText: 'Sure',
+    confirmButtonColor: '#2acbb3',
+    showCancelButton: true
+  }).then(function(e){
+    $.rails.confirmed(link);
+  });
+};
 
-	// document.addEventListener('click', function(e){
-	// 	var targetElement = event.target || event.srcElement;
-	// 	console.log(targetElement.id);
-	// 	if(targetElement.id === 'about-me-link'){
-	// 		console.log('clicked!');
-	// 		targetElement.toggle();
-	// 	}
-	// });
+
+
 
 });

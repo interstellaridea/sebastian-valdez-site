@@ -43,6 +43,8 @@ end
 
 gem 'jquery-rails'
 gem 'google-analytics-rails', '~> 1.1'
+gem 'sweet-alert', git: 'https://github.com/frank184/sweet-alert-rails'
+gem 'sweet-alert-confirm', git: 'https://github.com/humancopy/sweet-alert-rails-confirm'
 
 
 group :development, :test do

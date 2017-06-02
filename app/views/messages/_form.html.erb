@@ -2,8 +2,8 @@
 <h2>Ask Me a question:</h2>
 	<%= form_for @message, url: create_message_url, class: 'form-horizontal' do |f| %>
 		<% if @message.errors.any? %>
-			<%= @message.errors.each do |error| %>
-				<%= error %>
+			<% @message.errors.full_messages.each do |error| %>
+				<li class="errors"><%= error %></li>
 			<% end %>
 		<% end %>
 		<div class="form-group">
