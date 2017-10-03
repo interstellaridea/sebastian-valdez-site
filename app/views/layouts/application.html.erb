@@ -8,26 +8,20 @@
 		<%= analytics_init if GoogleAnalytics.valid_tracker? %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
   </head>
 
 	<body>
-
-<div class="container">
-	<div id="wrapper" class="row">
-		<div id="left-col" class="col-xs-6 col-md-5 col-lg-4">
-			<%= image_tag("profile_pic",
-			alt: "Me", id: "profile-pic", class: 'img-fluid') %>
-			<h2 id="profile-name"> Sebastian Valdez</h2>
-			<%= link_to "Resume", download_resume_path, id: 'resume-download-btn' %>
-		</div>
-		<div class="col-xs-6 col-md-7 col-lg-8">
-			<%= render 'shared/alerts' %>
-			<%= render 'shared/nav' %>
-			<%= yield %>
-		</div>
-	</div>
-	<hr style="border-bottom: 1px #fff solid;">
-</div>
-
+		<%= render 'shared/nav' %>
+		<%#= render 'shared/alerts' %>
+    <%#= video_tag(
+      'coffee_video.mp4',
+      id: 'background-video',
+      autoplay: true,
+      loop: true,
+      muted: true,
+    ) %>
+    <%= yield %>
+    <%= render 'footer' %>
 	</body>
 </html>

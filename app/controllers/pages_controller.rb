@@ -3,6 +3,9 @@ class PagesController < ApplicationController
     @message = Message.new
   end
 
+  def about_me
+  end
+
   def contact
   end
 

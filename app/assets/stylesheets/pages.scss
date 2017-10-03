@@ -1,3 +1,146 @@
-// Place all the styles related to the Pages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+/*!
+ * Start Bootstrap - Landing Page (http://startbootstrap.com/template-overviews/landing-page)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-landing-page/blob/master/LICENSE)
+ */
+
+
+.intro-header {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+  color: #f8f8f8;
+}
+
+.intro-message {
+  position: relative;
+  padding-top: 20%;
+  padding-bottom: 20%;
+}
+
+.intro-message>h1 {
+  margin: 0;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+  font-size: 5em;
+}
+
+.intro-divider {
+  width: 400px;
+  border-top: 1px solid #f8f8f8;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.intro-message>h3 {
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+.intro-social-buttons i {
+  font-size: 80%;
+}
+
+p.copyright {
+  margin: 15px 0 0;
+}
+// CUSTUSTOM STYLES
+#intro-of-me,#hobbies, #contact-me {
+  background-color: #eee;
+  padding: 5% 2% 5% 2%;
+}
+
+#hobbies {
+  background-color: #f8f8f8;
+}
+
+#background-video {
+  opacity: 0.8;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  // //background: image-url('home_bg.png') no-repeat;
+  // background-size: cover;
+}
+
+#site-wrapper {
+  margin-top: 6%;
+}
+
+.animated-msg-container {
+  color: #CD0000;
+  display: inline-block;
+  font-size: 3em;
+  font-weight: 400;
+}
+// still not blinking...
+.typed-cursor{
+  opacity: 1;
+  font-weight: 100;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
+  -ms-animation: blink 0.7s infinite;
+  -o-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {  
+  50% { opacity: 0; }
+}
+
+// MEDIA QUERIES
+
+@media(max-width:1199px) {
+  ul.banner-social-buttons {
+    float: left;
+    margin-top: 15px;
+  }
+}
+
+@media(max-width:767px) {
+  .intro-message {
+    padding-bottom: 15%;
+  }
+  .intro-message>h1 {
+    font-size: 3em;
+  }
+
+  ul.intro-social-buttons>li {
+    display: block;
+    margin-bottom: 20px;
+    padding: 0;
+  }
+
+  ul.intro-social-buttons>li:last-child {
+    margin-bottom: 0;
+  }
+
+  .intro-divider {
+    width: 100%;
+  }
+
+  .banner h2 {
+    margin: 0;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+    font-size: 3em;
+  }
+
+  ul.banner-social-buttons>li {
+    display: block;
+    margin-bottom: 20px;
+    padding: 0;
+  }
+
+  ul.banner-social-buttons>li:last-child {
+    margin-bottom: 0;
+  }
+  
+  .animated-msg-container {
+  font-size: 2em;
+  }
+}
+

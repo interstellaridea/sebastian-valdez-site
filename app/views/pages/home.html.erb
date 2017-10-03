@@ -1,29 +1,84 @@
 
-<article id="about-me">
-  <p>
-    Programming started out as hobby of mine and has, over the years, turned into one of my passions. I picked up Ruby and Rails because of an opportunity I saw at work to use the technology to save money and increase efficiency for Solar City.  I have since begun to seriously pursue a career in Software Development and am ready to transition into a professional role.
-  </p>
-  <p>
-    Programming is an active component of my every day. I am attending Rails conferences and Ruby meet ups to dive deeper into the community and enjoy studying Sandi Metz’s methodology on Object Oriented Design. The innovative community and means for creative problem solving that programming provides have inspired me to explore various side projects to strengthen my real world programming experience.
-  </p>
-  <p>
-    <b>Various projects I have worked on include:</b>
-    <ul>
-    <li>
-       Building a wrapper to better utilize RESTful APIs from Zoom's Cloud Meeting service, allowing my company to preform identity management on all of our licenses programatically.</li><br>
+  
+  <div class="row">
+    <div class="col-md-12">
+      <%= render 'header' %>
+    </div>
+   </div>
 
-    <li> Building a Ruby Gem to check spec coverage and help my TDD.</li><br>
+    <div id="intro-of-me" class="row">
+      <div class="container">
+        <h2>Intro</h2>
+          <div class="row">
+            <div class="col-md-4">
+              <%= image_tag("profile_pic", alt: "Me", id: "profile-pic", class: 'img-fluid') %>
+            </div>
+            <div class="col-md-8">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit repellendus aperiam facere amet, a dicta rem atque debitis suscipit. Ab dolores illo libero quidem excepturi, quisquam. Sed unde pariatur doloribus cumque autem facere est doloremque quidem sapiente, ducimus, quae debitis qui modi consectetur esse fugiat necessitatibus inventore. Deleniti excepturi eum odio minima fugit laboriosam quos eligendi reprehenderit quaerat atque! Incidunt!</p>
+            </div>
+          </div>
+        </div>
+    </div>
 
-    <li>Multiple Udemy rails projects that teach the use of:</li>
-    -<i>RSpec,  Debugging, Pushing to Heroku.</i></li></ul>
-  </p>
+    <div id="hobbies" class="row">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <h3>Hobbies</h3>
+            <ul class="list-group">
+              <li class="list-group-item">1</li>
+            </ul>
+            <ul class="list-group">
+              <li class="list-group-item">2</li>
+            </ul>
+            <ul class="list-group">
+              <li class="list-group-item">3</li>
+            </ul>
+            <ul class="list-group">
+              <li class="list-group-item">4</li>
+            </ul>
+            <ul class="list-group">
+              <li class="list-group-item">5</li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h2>Technologies</h2>
+            <ul class="list-group">
+              <li class="list-group-item">1</li>
+              <li class="list-group-item">2</li>
+              <li class="list-group-item">3</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  <p>
-    <b>Contributes to two separate open-source projects:</b>
-    <ul>
-      <li>An application where I helped architect and develop a rails back-end to track data about roasted coffee.</li>
-      <li>A site publishing music weekly to subscribers</li>
-    </ul>
-  </p>
+    <div id="contact-me" class="row">
+      <div class="container">
+        <h2>Contact me</h2>
+<!--         <%#= form_for binding.pry do |f| %>
+        <%#= f.text_field :name, placeholder: 'Name', class: 'form-control' %>
+        <%# end %>
+ -->
 
-</article>
+
+        <div class="col-md-6 offset-md-3">
+          <div class="form-group">
+            <label for="name"></label>
+            <input type="text" class="form-control">
+          </div>
+
+          <div class="form-group">
+            <label for="email"></label>
+            <input type="text" class="form-control">
+          </div>
+
+          <div class="form-group">
+            <label for="message"></label>
+            <input type="textarea" class="form-control">
+          </div>
+          <div class="btn btn-info">Submit</div>
+          <div class="btn btn-secondary">reset</div>
+      </div>        
+    </div>
+  </div>
