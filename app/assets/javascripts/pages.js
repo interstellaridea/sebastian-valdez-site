@@ -2,6 +2,10 @@
 $(document).on('ready turbolinks:load',function(){
 	console.log('pages loaded ready');
 
+	$('#hobbies.row.match-height').each(function() {
+   $(this).find('.card').not('.card .card').matchHeight(); // Not .card .card prevents collapsible cards from taking height
+	});
+
 	var options = {
 	  strings: [
 	  	'Hello, my name is <strong>Sebastian Valdez</strong>',

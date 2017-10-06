@@ -15,6 +15,7 @@
 //= require rails-ujs
 //= require bootstrap-sprockets
 //= require popper
+//= require lib/jquery_match_height
 //= require lib/typed
 //= require turbolinks
 //= require_tree .
