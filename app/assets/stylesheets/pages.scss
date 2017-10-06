@@ -42,27 +42,42 @@ p.copyright {
   margin: 15px 0 0;
 }
 // CUSTUSTOM STYLES
-#intro-of-me,#hobbies, #contact-me {
-  background-color: #eee;
+
+#profile-pic {
+  border-radius: 100%;
+  border: 12px solid #DB162F;
+}
+
+#intro-of-me {
+  background-color: #5F758E;
   padding: 5% 2% 5% 2%;
+  color: #fff;
+  h2 {
+    font-weight: 200;
+  }
 }
 
 #hobbies {
+  padding: 5% 2% 5% 2%;
   background-color: #f8f8f8;
+}
+#contact-me {
+  background-color: #DBDFAC;
+  padding: 5% 2% 5% 2%;
 }
 
 #background-video {
   opacity: 0.8;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
+  opacity: 0.8;
+  z-index: -100;
+  background-size: cover;
   width: auto;
   height: auto;
-  z-index: -100;
+  min-width: 100%;
+  min-height: 100%;
+  position: absolute;
   -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-6%);
   // //background: image-url('home_bg.png') no-repeat;
   // background-size: cover;
 }
@@ -71,13 +86,69 @@ p.copyright {
   margin-top: 6%;
 }
 
+// on hover of card-img-top , zoom in a little
+
+.card {
+  background-color: #383961;
+  color: #fff;
+  a {
+    color: #DBDFAC;
+  }
+  a:hover {
+    text-decoration: none;
+    font-weight: 400; 
+    color: #DB162F;
+  }
+}
+
+.card-headline {
+  color: #DB162F;
+}
+
+.card-img-wrap {
+  overflow: hidden;
+  position: relative;
+}
+.card-img-wrap:after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(255,255,255,0.3);
+  opacity: 0;
+  transition: opacity .25s;
+}
+.card-img-wrap img {
+  transition: transform .25s;
+  width: 100%;
+}
+.card-img-wrap:hover img {
+  transform: scale(1.2);
+}
+.card-img-wrap:hover:after {
+  opacity: 1;
+}
+// end hover
+
+.card-img-overlay {
+  margin-top: 2rem;
+  color: white;
+}
+
+.card-img-top {
+  opacity: 0.8;
+}
+
+.img-thumbnail {
+  min-height: 210px;
+}
+
 .animated-msg-container {
-  color: #CD0000;
+  color: #FFF;
   display: inline-block;
   font-size: 3em;
   font-weight: 400;
 }
-// still not blinking...
+
 .typed-cursor{
   opacity: 1;
   font-weight: 100;

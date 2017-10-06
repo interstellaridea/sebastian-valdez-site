@@ -12,24 +12,24 @@
       <li class="list-inline-item">
         <a href="#services">Blog</a>
       </li>
-      <li class="footer-menu-divider list-inline-item">&sdot;</li>
-      <li class="list-inline-item">
-        <a href="#contact">Contact</a>
+      <hr>
+      <ul class="list-inline text-center">
+      <li class="list-inline-item text-center">
+        <%= link_to fa_icon('linkedin',text: tag(:br) + content_tag(:span, 'LinkedIn').html_safe, class: 'fa-3x'),'#'  %>
       </li>
-      <li class="list-inline-item">
-        <a href="#contact">LinkedIn</a>
+      <li class="list-inline-item text-center">
+        <%= link_to fa_icon('github', text: tag(:br) + content_tag(:span, 'Github').html_safe, class: 'fa-3x'),'#'  %>
       </li>
-      <li class="list-inline-item">
-        <a href="#contact">Github</a>
+      <li class="list-inline-item text-center">
+        <%= link_to fa_icon('instagram', text: tag(:br) + content_tag(:span, 'Instagram').html_safe, class: 'fa-3x'),'#'  %>
+
       </li>
-      <li class="list-inline-item">
-        <a href="#contact">Instagram</a>
+      <li class="list-inline-item text-center">
+        <%= link_to fa_icon('download', text: tag(:br) + content_tag(:span, 'Resume').html_safe, class: 'fa-3x'),'#'  %>
       </li>
-      <li class="list-inline-item">
-        <div class="btn" href="#">Download Resume</div>
-      </li>
+      </ul>
     </ul>
-    <p class="copyright text-muted small">
+    <p class="copyright text-center">
       <%= generate_copyright %>
     </p>
   </div>

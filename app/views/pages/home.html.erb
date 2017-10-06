@@ -1,84 +1,10 @@
-
-  
-  <div class="row">
-    <div class="col-md-12">
-      <%= render 'header' %>
-    </div>
-   </div>
-
-    <div id="intro-of-me" class="row">
-      <div class="container">
-        <h2>Intro</h2>
-          <div class="row">
-            <div class="col-md-4">
-              <%= image_tag("profile_pic", alt: "Me", id: "profile-pic", class: 'img-fluid') %>
-            </div>
-            <div class="col-md-8">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit repellendus aperiam facere amet, a dicta rem atque debitis suscipit. Ab dolores illo libero quidem excepturi, quisquam. Sed unde pariatur doloribus cumque autem facere est doloremque quidem sapiente, ducimus, quae debitis qui modi consectetur esse fugiat necessitatibus inventore. Deleniti excepturi eum odio minima fugit laboriosam quos eligendi reprehenderit quaerat atque! Incidunt!</p>
-            </div>
-          </div>
-        </div>
-    </div>
-
-    <div id="hobbies" class="row">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8">
-            <h3>Hobbies</h3>
-            <ul class="list-group">
-              <li class="list-group-item">1</li>
-            </ul>
-            <ul class="list-group">
-              <li class="list-group-item">2</li>
-            </ul>
-            <ul class="list-group">
-              <li class="list-group-item">3</li>
-            </ul>
-            <ul class="list-group">
-              <li class="list-group-item">4</li>
-            </ul>
-            <ul class="list-group">
-              <li class="list-group-item">5</li>
-            </ul>
-          </div>
-          <div class="col-md-4">
-            <h2>Technologies</h2>
-            <ul class="list-group">
-              <li class="list-group-item">1</li>
-              <li class="list-group-item">2</li>
-              <li class="list-group-item">3</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div id="contact-me" class="row">
-      <div class="container">
-        <h2>Contact me</h2>
-<!--         <%#= form_for binding.pry do |f| %>
-        <%#= f.text_field :name, placeholder: 'Name', class: 'form-control' %>
-        <%# end %>
- -->
-
-
-        <div class="col-md-6 offset-md-3">
-          <div class="form-group">
-            <label for="name"></label>
-            <input type="text" class="form-control">
-          </div>
-
-          <div class="form-group">
-            <label for="email"></label>
-            <input type="text" class="form-control">
-          </div>
-
-          <div class="form-group">
-            <label for="message"></label>
-            <input type="textarea" class="form-control">
-          </div>
-          <div class="btn btn-info">Submit</div>
-          <div class="btn btn-secondary">reset</div>
-      </div>        
-    </div>
+<div class="row">
+  <div class="col">
+    <%= render partial: 'pages/items/header' %>  
   </div>
+</div>
+
+<%= render partial: 'pages/items/introduction' %>
+<%= render partial: 'pages/items/hobbies' %>
+<%= render partial: 'pages/items/technologies' %>
+<%= render partial: 'pages/items/contact_me' %>

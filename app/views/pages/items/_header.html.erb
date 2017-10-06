@@ -1,11 +1,18 @@
 <header class="intro-header">
+
+    <%= video_tag(
+      'coffee_video.mp4',
+      id: 'background-video',
+      autoplay: true,
+      loop: true,
+      muted: true,
+    ) %>
+
   <div class="container">
     <div class="intro-message">
-
       <p class="animated-msg-container">
         <span class="animated-msg"></span>
       </p>      
-      
       <hr class="intro-divider">
       <ul class="list-inline intro-social-buttons">
         <li class="list-inline-item">

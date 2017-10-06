@@ -1,8 +1,16 @@
 // Application.scss
 
 @import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,300,400');
 @import "font-awesome";
 @import "pages";
+
+// Color Scheme
+// Purple #3B1F2B
+// Red #DB162F
+// Beige #DBDFAC
+// GreyBlue $5F758E
+// NavyBlue #383961
 
 body, html {
   width: 100%;
@@ -10,15 +18,31 @@ body, html {
 }
 
 body, h1, h2, h3, h4, h5, h6 {
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 700;
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  font-weight: 400;
 }
 
+a:hover{
+	text-decoration: none;
+}
+
+.shadow {
+	-moz-box-shadow: 18px 8px 20px 5px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 18px 8px 20px 5px rgba(0, 0, 0, 0.5);
+	box-shadow: 18px 8px 20px 5px rgba(0, 0, 0, 0.5);
+}
 
 .footer {
 	padding: 50px 0;
-	background-color: #f8f8f8;
+	background-color: #383961;
+	color: #DBDFAC;
 	position: relative;
 	bottom: 0;
 	min-width: 100%;
+	a:hover {
+		color: #DB162F;
+	}
+	a,p {
+		color: #DBDFAC;
+	}
 }
