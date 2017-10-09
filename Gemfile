@@ -51,3 +51,4 @@ gem "font-awesome-rails"
 gem 'bootstrap', '~> 4.0.0.beta'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'seb_view_tool', '~> 0.1.0'
+gem 'sendgrid', '~> 1.2', '>= 1.2.4'

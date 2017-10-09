@@ -1,15 +1,20 @@
-<div id="contact-me" class="row shadow">
+	<div id="contact-me" class="row">
   <div class="container">
     <div class="row">
       <div class="col-7 mx-auto">
       <h2>Contact me</h2> 
-      <%= form_for new_message_path, method: :get do |f| %>
+      <%= form_for @message, url: contact_me_path do |f| %>
+	      
         <div class="form-group">
           <%= f.text_field :name, placeholder: 'Your Name', class: 'form-control' %>
         </div>
 
         <div class="form-group">
-          <%= f.text_field :email, placeholder: 'Your Email',class: 'form-control' %>
+          <%= f.text_field :subject, placeholder: 'Subject', class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= f.text_field :sender_email, placeholder: 'Your Email',class: 'form-control' %>
         </div>
 
         <div class="form-group">

@@ -7,6 +7,15 @@ class PagesController < ApplicationController
   end
 
   def contact
+    @message = Message.new(message_params)
+    if @message
+      ContactMeMailer.send_contact(@message).deliver_now
+      flash[:success] = "Your message was delivered!"
+      redirect_to root_path
+    else
+      flash[:error] = "Your message was not delivered!"
+      redirect_to root_path
+    end      
   end
 
   def download_resume
@@ -15,5 +24,13 @@ class PagesController < ApplicationController
     filename: "SebastianValdez_Resume.pdf",
     type: "application/pdf"
     )
+  end
+  private
+  def message_params
+    params.require(:message).permit(
+                            :name,
+                            :subject,
+                            :sender_email,
+                            :body )
   end
 end
