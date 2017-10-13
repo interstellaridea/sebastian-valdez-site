@@ -66,6 +66,11 @@ p.copyright {
   padding: 5% 2% 5% 2%;
 }
 
+.field_with_errors > label {
+  color: #DB162F;
+  font-size: 20px;
+}
+
 #background-video {
   opacity: 0.8;
   opacity: 0.8;
