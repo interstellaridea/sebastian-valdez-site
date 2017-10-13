@@ -3,22 +3,22 @@
     <div class="row">
       <div class="col-7 mx-auto">
       <h2>Contact me</h2> 
-      <%= form_with model: @message, url: contact_me_path, id: 'new_message' do |f| %>
+      <%= form_for @message, url: contact_me_path, remote: true, validate: true do |f| %>
 	      
         <div class="form-group">
-          <%= f.text_field :name, id: 'message_name', placeholder: 'Your Name', class: 'form-control' %>
+          <%= f.text_field :name, placeholder: 'Your Name', class: 'message form-control' %>
         </div>
 
         <div class="form-group">
-          <%= f.text_field :subject, placeholder: 'Subject', class: 'form-control' %>
+          <%= f.text_field :subject, placeholder: 'Subject', class: 'message form-control' %>
         </div>
 
         <div class="form-group">
-          <%= f.text_field :sender_email, placeholder: 'Your Email',class: 'form-control' %>
+          <%= f.text_field :sender_email, placeholder: 'Your Email',class: 'message form-control' %>
         </div>
 
         <div class="form-group">
-          <%= f.text_area :body, placeholder: 'Your Message', class: 'form-control', rows: 5 %>
+          <%= f.text_area :body, placeholder: 'Your Message', class: 'message form-control', rows: 5 %>
         </div>
           <%= f.button fa_icon('paper-plane',text: 'Send'), type: 'submit', class: 'btn btn-info' %>
           <%= button_tag 'Reset', type: 'reset', class: 'btn btn-secondary' %>

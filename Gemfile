@@ -51,3 +51,4 @@ gem 'dotenv-rails', groups: [:development, :test]
 gem 'seb_view_tool', '~> 0.1.0'
 gem 'sendgrid', '~> 1.2', '>= 1.2.4'
 gem 'sweetalert2', '~> 4.0', '>= 4.0.11'
+gem 'client_side_validations', '~> 10.0', '>= 10.0.1', git: 'https://github.com/DavyJonesLocker/client_side_validations'
