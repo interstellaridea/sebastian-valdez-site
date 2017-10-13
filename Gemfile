@@ -45,10 +45,9 @@ end
 # Added by me
 gem 'jquery-rails'
 gem 'google-analytics-rails', '~> 1.1'
-gem 'sweet-alert', git: 'https://github.com/frank184/sweet-alert-rails'
-gem 'sweet-alert-confirm', git: 'https://github.com/humancopy/sweet-alert-rails-confirm'
 gem "font-awesome-rails"
 gem 'bootstrap', '~> 4.0.0.beta'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'seb_view_tool', '~> 0.1.0'
 gem 'sendgrid', '~> 1.2', '>= 1.2.4'
+gem 'sweetalert2', '~> 4.0', '>= 4.0.11'
