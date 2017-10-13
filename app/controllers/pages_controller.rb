@@ -10,8 +10,6 @@ class PagesController < ApplicationController
     @message = Message.new(message_params)
     if @message
       ContactMeMailer.send_contact(@message).deliver_now
-      flash[:success] = "Your message was delivered!"
-      redirect_to root_path
     else
       flash[:error] = "Your message was not delivered!"
       redirect_to root_path
