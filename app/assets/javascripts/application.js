@@ -18,4 +18,5 @@
 //= require lib/jquery_match_height
 //= require lib/typed
 //= require turbolinks
+//= require sweetalert2
 //= require_tree .
