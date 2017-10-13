@@ -1,6 +1,0 @@
-# pack-refs with: peeled fully-peeled 
-d122079e54e6d07fdfc1bc53b47d895a007dd295 refs/heads/ajax-complete-binding
-7fb307cd52600b5a6e49e0c8e4a43f75b7784fdf refs/heads/master
-56f205d023e164abcf87c268a8a8d4b1f7e30e76 refs/heads/override-defaults
-80339fae45a07a8a97863eaa79753b3ba2f34d5e refs/heads/submit_tag-alert
-6d5b1e147fa63c89a9a5c4053aedbe0cf7b44ec9 refs/heads/tests-turbolinks
