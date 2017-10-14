@@ -1,6 +1,9 @@
 class Message
 	include ActiveModel::Model # brings in initialize method
 	attr_accessor :name, :subject, :sender_email, :body
-	validates :name, :subject, :sender_email, :body, presence: true
+	validates :name, presence: true
+	validates :subject, presence: true
+	validates :sender_email, presence: true
+	validates :body, presence: true
 
 end
