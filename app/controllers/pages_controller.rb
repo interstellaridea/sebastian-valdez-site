@@ -8,12 +8,11 @@ class PagesController < ApplicationController
 
   def contact
     @message = Message.new(message_params)
-    if @message
+    if @message.valid?
       ContactMeMailer.send_contact(@message).deliver_now
     else
-      flash[:error] = "Your message was not delivered!"
-      redirect_to root_path
-    end      
+      render nothing: true, status: :service_unavailable
+    end
   end
 
   def download_resume
