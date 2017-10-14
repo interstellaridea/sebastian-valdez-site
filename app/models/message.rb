@@ -4,6 +4,7 @@ class Message
 	validates :name, presence: true
 	validates :subject, presence: true
 	validates :sender_email, presence: true
+	validates_email :sender_email
 	validates :body, presence: true
 
 end

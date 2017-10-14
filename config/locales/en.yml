@@ -30,7 +30,9 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  errors:
+    messages:
+      email: "Not a valid email address"
 # sets subject for MeassageMailer#contact_me
   # message_mailer:
   #   contact_me:

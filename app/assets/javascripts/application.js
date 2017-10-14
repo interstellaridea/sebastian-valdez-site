@@ -19,5 +19,6 @@
 //= require lib/typed
 //= require turbolinks
 //= require rails.validations
+//= require lib/rails.validations.custom.js
 //= require sweetalert2
 //= require_tree .
