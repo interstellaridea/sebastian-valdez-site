@@ -8,17 +8,18 @@
 $(document).on('ready turbolinks:load',function(){
 
 	//SweetAler2 on ajax
-	$('#new_message').on('ajax:before', function(){ // AJAX BEFORE HANDLE
-		swal({
-			title: 'Sending Message',
-			html: '<i class="fa fa-spinner fa-spin fa-3x" aria-hidden="true"></i>' +
-						'<br /><h3>Sending...</h3>',
-			onOpen: function(){
-				swal.disableConfirmButton()
-			}
-		});
-	}).on('ajax:complete', function(){ // AJAX COMPLETE HANDLE
-			console.log('ajax:complete');
+	$('#new_message').on({
+		'ajax:send': function(){
+			swal({
+				title: 'Sending Message',
+				html: '<i class="fa fa-spinner fa-spin fa-3x" aria-hidden="true"></i>' +
+							'<br /><h3>Sending...</h3>',
+				onOpen: function(){
+					swal.disableConfirmButton();
+				}
+			});
+		},
+		'ajax:success': function(){
 			swal({
 				type: 'success',
 				title:
@@ -29,17 +30,21 @@ $(document).on('ready turbolinks:load',function(){
 			}).then(function(){  // AJAX CALLBACK TO CLEAR MESSAGE AND SCOLLTOP
 					after_message_submit();				
 			});
-		}).on('ajax:error', function(){ // AJAX ERROR HANDLE
+		},
+		'ajax:error': function(){
 			swal({
 				type: 'error',
 				title: 'Opps!',
-				text: 'Sorry we couldnt contact the Mail server!',
+				text:
+					'Sorry we couldnt contact the Mail server!\n' + 
+					'Try again later.',
 				timer: 2000,
 				onOpen: function(){
-					swal.disableConfimButton()
+					swal.disableConfimButton();
 				}
 			});
-		});
+		}
+	});
 
 	// Auto ajust size of cards using lib/jquery_match_height.js
 	$('#hobbies.row.match-height').each(function() {
