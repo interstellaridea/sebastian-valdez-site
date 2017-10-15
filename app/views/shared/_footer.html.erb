@@ -6,26 +6,26 @@
       </li>
       <li class="footer-menu-divider list-inline-item">&sdot;</li>
       <li class="list-inline-item">
-        <a href="#about">About</a>
+        <a href="#intro-of-me">About</a>
       </li>
       <li class="footer-menu-divider list-inline-item">&sdot;</li>
-      <li class="list-inline-item">
+<!--       <li class="list-inline-item">
         <a href="#services">Blog</a>
-      </li>
+      </li> -->
       <hr>
       <ul class="list-inline text-center">
       <li class="list-inline-item text-center">
-        <%= link_to fa_icon('linkedin',text: tag(:br) + content_tag(:span, 'LinkedIn').html_safe, class: 'fa-3x'),'#'  %>
+        <%= link_to fa_icon('linkedin',text: tag(:br) + content_tag(:span, 'LinkedIn').html_safe, class: 'fa-3x'),'https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile', target: '_blank'  %>
       </li>
       <li class="list-inline-item text-center">
-        <%= link_to fa_icon('github', text: tag(:br) + content_tag(:span, 'Github').html_safe, class: 'fa-3x'),'#'  %>
+        <%= link_to fa_icon('github', text: tag(:br) + content_tag(:span, 'Github').html_safe, class: 'fa-3x'),'https://github.com/interstellaridea/', target: '_blank'  %>
       </li>
       <li class="list-inline-item text-center">
-        <%= link_to fa_icon('instagram', text: tag(:br) + content_tag(:span, 'Instagram').html_safe, class: 'fa-3x'),'#'  %>
+        <%= link_to fa_icon('instagram', text: tag(:br) + content_tag(:span, 'Instagram').html_safe, class: 'fa-3x'),'https://www.instagram.com/sebby654/', target: '_blank'  %>
 
       </li>
       <li class="list-inline-item text-center">
-        <%= link_to fa_icon('download', text: tag(:br) + content_tag(:span, 'Resume').html_safe, class: 'fa-3x'),'#'  %>
+        <%= link_to fa_icon('download', text: tag(:br) + content_tag(:span, 'Resume').html_safe, class: 'fa-3x'), download_resume_path  %>
       </li>
       </ul>
     </ul>
