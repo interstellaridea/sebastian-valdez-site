@@ -5,14 +5,17 @@
       <div class="row text-center">
         <div class="col-md-4">
           <%= image_tag("profile", alt: "Me", id: "profile-pic", class: 'img-fluid') %>
-          <%= link_to fa_icon('download', text: 'Resume'), '#', class: 'btn btn-secondary btn-block mb-2' %>
+          <%= link_to fa_icon('download', text: 'Resume'), action: :download_resume, class: 'btn btn-secondary btn-block mb-2' %>
         </div>
         <div class="col-md-8 mt-5">
           <div class="row ">
-            <div class="col">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit repellendus aperiam facere amet, a dicta rem atque debitis suscipit. Ab dolores illo</p>
-              <p>libero quidem excepturi, quisquam. Sed unde pariatur doloribus cumque autem facere est doloremque quidem sapiente, ducimus, quae debitis qui modi consectetur esse fugiat necessitatibus inventore. Deleniti excepturi eum odio minima fugit laboriosam quos eligendi reprehenderit quaerat atque! Incidunt!</p>
-              <%= link_to fa_icon('arrow-right', text: 'Learn more about me....'), '#', class: 'btn btn-lg btn-info' %>
+            <div class="col intro-text">
+              <p>Programming is an active component of my every day.</p>
+              <p>The innovative community and means for creative problem solving that programming provides have inspired me to explore various side projects to strengthen my real world programming experience.</p>
+              <p>I thrive in a work environment that both challenges me and encourages exponential growth, and the start up environment provides that. The creative culture that exists around the technology industry promotes a continual flow of new and innovative ideas, making the step from Av Engineering into Software Development a natural transition.</p>
+              <p>I attend Rails conferences and Ruby meet ups to continue to dive deeper into the community.</p>
+                
+              <%#= link_to fa_icon('arrow-right', text: 'Learn more about me....'), '#', class: 'btn btn-lg btn-info' %>
             </div>
           </div>
         </div>
