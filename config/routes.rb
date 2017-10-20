@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+	
+	devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout' }, skip: [:registrations]
   get  'resume-download', to: 'pages#download_resume', as: 'download_resume'
   get 	'about-me',	to: 'pages#about_me'
   post 'contact_me', to: 'pages#contact'
