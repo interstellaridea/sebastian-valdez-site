@@ -5,7 +5,20 @@
 		window.scrollTo(0, 100);	
 	};
 
+	//jQuer downloader for resume ajax downloads
+	$(function(){
+	});
+
 $(document).on('ready turbolinks:load',function(){
+
+		$('.jquery-download').on('click', function(e){
+			e.preventDefault();
+			$.fileDownload($(this).find('a').prop('href'),{
+				successCallback: function (url) { swal({ type: 'success', text: 'Thanks for downloading my resume!' }) },
+				failCallback: function (url) { swal({type: 'error', text: 'Opps, couldnt download, try again later'}) }
+			});
+		});
+
 
 	//SweetAler2 on ajax
 	$('#new_message').on({

@@ -13,6 +13,7 @@
 //
 //= require jquery3
 //= require rails-ujs
+//= require jquery.fileDownload
 //= require popper
 //= require bootstrap-sprockets
 //= require lib/jquery_match_height

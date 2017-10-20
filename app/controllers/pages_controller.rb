@@ -17,13 +17,15 @@ class PagesController < ApplicationController
   end
 
   def download_resume
+   cookies['fileDownload'] = 'true'
+
     @current_resume = Resume.last
     send_file(
       @current_resume.location.path,
       filename: "SebastianValdez_Resume.pdf",
       type: 'application/pdf',
       disposition: 'attachment',
-      url_based_filename: true
+      x_sendfile: true
     )
   end
   private

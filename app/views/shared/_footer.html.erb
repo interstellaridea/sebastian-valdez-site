@@ -21,8 +21,8 @@
         <%= link_to fa_icon('instagram', text: tag(:br) + content_tag(:span, 'Instagram').html_safe, class: 'fa-3x'),'https://www.instagram.com/sebby654/', target: '_blank'  %>
 
       </li>
-      <li class="list-inline-item text-center">
-        <%= link_to fa_icon('download', text: tag(:br) + content_tag(:span, 'Resume').html_safe, class: 'fa-3x'), action: 'download_resume' %> 
+      <li class="list-inline-item text-center jquery-download">
+        <%= link_to fa_icon('download', text: tag(:br) + content_tag(:span, 'Resume').html_safe, class: 'fa-3x'), download_resume_path %> 
       </li>
       </ul>
     </ul>
