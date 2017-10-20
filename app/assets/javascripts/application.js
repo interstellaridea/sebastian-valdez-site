@@ -13,11 +13,11 @@
 //
 //= require jquery3
 //= require rails-ujs
-//= require bootstrap-sprockets
 //= require popper
+//= require bootstrap-sprockets
 //= require lib/jquery_match_height
-//= require lib/typed
 //= require turbolinks
+//= require lib/typed
 //= require rails.validations
 //= require lib/rails.validations.custom.js
 //= require sweetalert2
