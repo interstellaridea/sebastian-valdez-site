@@ -5,6 +5,7 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:100,300,400');
 @import "font-awesome";
 @import "pages";
+@import "portal";
 
 // Color Scheme
 // Purple #3B1F2B
@@ -27,12 +28,10 @@ a:hover{
 	text-decoration: none;
 }
 
-.shadow {
-	-moz-box-shadow: 18px 8px 20px 5px rgba(0, 0, 0, 0.5);
-	-webkit-box-shadow: 18px 8px 20px 5px rgba(0, 0, 0, 0.5);
-	box-shadow: 18px 8px 20px 5px rgba(0, 0, 0, 0.5);
+.devise-login{
+	margin-top: 3.2em;
+	min-height: 100%;
 }
-
 .footer {
 	padding: 50px 0;
 	background-color: #383961;
