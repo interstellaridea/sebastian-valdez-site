@@ -54,13 +54,8 @@ $(document).on('ready turbolinks:load',function(){
 	var options = {
 	  strings: [
 	  	'Hello, my name is <strong>Sebastian Valdez</strong>',
-	  	'I am a <b><i>Ruby on Rails Developer</i></b>, pursuing an <b>oppertunity</b> to build amazing things',
-	  	'Some of my hobbies are:',
-	  	'Writing code ... :P',
-	  	'Brewing and Roasting my own coffee',
-	  	'3D Printing things',
-	  	'Being outdoors',
-	  	'Learn more about me and what I know from my Github and blog.'
+	  	'I am a <b><i>Ruby on Rails Developer</i></b>, with a passion for creating.',
+	  	'Thanks for stopping by!'
 	  ],
 	  typeSpeed: 50,
 	  cursorChar: ' |'
