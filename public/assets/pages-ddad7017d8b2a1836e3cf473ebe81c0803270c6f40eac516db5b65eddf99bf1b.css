@@ -1,0 +1,270 @@
+/*!
+ * Start Bootstrap - Landing Page (http://startbootstrap.com/template-overviews/landing-page)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-landing-page/blob/master/LICENSE)
+ */
+/* line 9, /Users/svaldez/railsApps/sebastian-valdez-site/app/assets/stylesheets/pages.scss */
+.intro-header {
+  padding-top: 33px;
+  padding-bottom: 33px;
+  text-align: center;
+  color: #f8f8f8;
+}
+
+/* line 16, /Users/svaldez/railsApps/sebastian-valdez-site/app/assets/stylesheets/pages.scss */
+.intro-message {
+  position: relative;
+  padding-top: 20%;
+  padding-bottom: 5%;
+}
+
+/* line 22, /Users/svaldez/railsApps/sebastian-valdez-site/app/assets/stylesheets/pages.scss */
+.intro-divider {
+  width: 400px;
+  border-top: 1px solid #f8f8f8;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/* line 28, /Users/svaldez/railsApps/sebastian-valdez-site/app/assets/stylesheets/pages.scss */
+.intro-message > h3 {
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+/* line 32, /Users/svaldez/railsApps/sebastian-valdez-site/app/assets/stylesheets/pages.scss */
+.intro-social-buttons i {
+  font-size: 80%;
+}
+
+/* line 36, /Users/svaldez/railsApps/sebastian-valdez-site/app/assets/stylesheets/pages.scss */
+p.copyright {
+  margin: 15px 0 0;
+}
+
+/* line 41, /Users/svaldez/railsApps/sebastian-valdez-site/app/assets/stylesheets/pages.scss */
+#profile-pic {
+  border-radius: 100%;
+  border: 12px solid #DB162F;
+}
+
+/* line 46, /Users/svaldez/railsApps/sebastian-valdez-site/app/assets/stylesheets/pages.scss */
+#intro-of-me {
+  background-color: #5F758E;
+  padding: 5% 2% 5% 2%;
+  color: #fff;
+}
+/* line 50, /Users/svaldez/railsApps/sebastian-valdez-site/app/assets/stylesheets/pages.scss */
+#intro-of-me h2 {
+  font-weight: 200;
+}
+
+/* line 55, /Users/svaldez/railsApps/sebastian-valdez-site/app/assets/stylesheets/pages.scss */
+#intro-resume-download-btn > a {
+  color: #fff;
+}
+
+/* line 60, /Users/svaldez/railsApps/sebastian-valdez-site/app/assets/stylesheets/pages.scss */
+.intro-text {
+  font-size: 1.2em;
+}
+
+/* line 64, /Users/svaldez/railsApps/sebastian-valdez-site/app/assets/stylesheets/pages.scss */
+#hobbies {
+  padding: 5% 2% 5% 2%;
+  background-color: #f8f8f8;
+}
+
+/* line 68, /Users/svaldez/railsApps/sebastian-valdez-site/app/assets/stylesheets/pages.scss */
+#contact-me {
+  background-color: #DBDFAC;
+  padding: 5% 2% 5% 2%;
+}
+
+/* line 73, /Users/svaldez/railsApps/sebastian-valdez-site/app/assets/stylesheets/pages.scss */
+.field_with_errors > label {
+  color: #DB162F;
+  font-size: 20px;
+}
+
+/* line 78, /Users/svaldez/railsApps/sebastian-valdez-site/app/assets/stylesheets/pages.scss */
+#background-video {
+  opacity: 0.8;
+  opacity: 0.8;
+  z-index: -100;
+  background-size: cover;
+  width: auto;
+  height: auto;
+  min-width: 100%;
+  min-height: 100%;
+  position: absolute;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-6%);
+}
+
+/* line 94, /Users/svaldez/railsApps/sebastian-valdez-site/app/assets/stylesheets/pages.scss */
+#site-wrapper {
+  margin-top: 6%;
+}
+
+/* line 100, /Users/svaldez/railsApps/sebastian-valdez-site/app/assets/stylesheets/pages.scss */
+.card {
+  background-color: #383961;
+  color: #fff;
+}
+/* line 103, /Users/svaldez/railsApps/sebastian-valdez-site/app/assets/stylesheets/pages.scss */
+.card a {
+  color: #DBDFAC;
+}
+/* line 106, /Users/svaldez/railsApps/sebastian-valdez-site/app/assets/stylesheets/pages.scss */
+.card a:hover {
+  text-decoration: none;
+  font-weight: 400;
+  color: #DB162F;
+}
+
+/* line 113, /Users/svaldez/railsApps/sebastian-valdez-site/app/assets/stylesheets/pages.scss */
+.card-headline {
+  color: #DB162F;
+}
+
+/* line 117, /Users/svaldez/railsApps/sebastian-valdez-site/app/assets/stylesheets/pages.scss */
+.card-img-wrap {
+  overflow: hidden;
+  position: relative;
+}
+
+/* line 121, /Users/svaldez/railsApps/sebastian-valdez-site/app/assets/stylesheets/pages.scss */
+.card-img-wrap:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.3);
+  opacity: 0;
+  -webkit-transition: opacity .25s;
+  transition: opacity .25s;
+}
+
+/* line 129, /Users/svaldez/railsApps/sebastian-valdez-site/app/assets/stylesheets/pages.scss */
+.card-img-wrap img {
+  -webkit-transition: -webkit-transform .25s;
+  transition: -webkit-transform .25s;
+  transition: transform .25s;
+  transition: transform .25s, -webkit-transform .25s;
+  width: 100%;
+}
+
+/* line 133, /Users/svaldez/railsApps/sebastian-valdez-site/app/assets/stylesheets/pages.scss */
+.card-img-wrap:hover img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+/* line 136, /Users/svaldez/railsApps/sebastian-valdez-site/app/assets/stylesheets/pages.scss */
+.card-img-wrap:hover:after {
+  opacity: 1;
+}
+
+/* line 141, /Users/svaldez/railsApps/sebastian-valdez-site/app/assets/stylesheets/pages.scss */
+.card-img-overlay {
+  margin-top: 2rem;
+  color: white;
+}
+
+/* line 146, /Users/svaldez/railsApps/sebastian-valdez-site/app/assets/stylesheets/pages.scss */
+.card-img-top {
+  opacity: 0.8;
+}
+
+/* line 150, /Users/svaldez/railsApps/sebastian-valdez-site/app/assets/stylesheets/pages.scss */
+.img-thumbnail {
+  min-height: 210px;
+}
+
+/* line 154, /Users/svaldez/railsApps/sebastian-valdez-site/app/assets/stylesheets/pages.scss */
+.animated-msg-container {
+  color: #FFF;
+  display: inline-block;
+  font-size: 3em;
+  font-weight: 400;
+}
+
+/* line 161, /Users/svaldez/railsApps/sebastian-valdez-site/app/assets/stylesheets/pages.scss */
+.typed-cursor {
+  opacity: 1;
+  font-weight: 100;
+  -webkit-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite;
+}
+
+@-webkit-keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+@media (max-width: 1199px) {
+  /* line 178, /Users/svaldez/railsApps/sebastian-valdez-site/app/assets/stylesheets/pages.scss */
+  ul.banner-social-buttons {
+    float: left;
+    margin-top: 15px;
+  }
+}
+@media (max-width: 767px) {
+  /* line 185, /Users/svaldez/railsApps/sebastian-valdez-site/app/assets/stylesheets/pages.scss */
+  .intro-message {
+    padding-bottom: 15%;
+  }
+
+  /* line 188, /Users/svaldez/railsApps/sebastian-valdez-site/app/assets/stylesheets/pages.scss */
+  .intro-message > h1 {
+    font-size: 3em;
+  }
+
+  /* line 192, /Users/svaldez/railsApps/sebastian-valdez-site/app/assets/stylesheets/pages.scss */
+  ul.intro-social-buttons > li {
+    display: block;
+    margin-bottom: 20px;
+    padding: 0;
+  }
+
+  /* line 198, /Users/svaldez/railsApps/sebastian-valdez-site/app/assets/stylesheets/pages.scss */
+  ul.intro-social-buttons > li:last-child {
+    margin-bottom: 0;
+  }
+
+  /* line 202, /Users/svaldez/railsApps/sebastian-valdez-site/app/assets/stylesheets/pages.scss */
+  .intro-divider {
+    width: 100%;
+  }
+
+  /* line 206, /Users/svaldez/railsApps/sebastian-valdez-site/app/assets/stylesheets/pages.scss */
+  .banner h2 {
+    margin: 0;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+    font-size: 3em;
+  }
+
+  /* line 212, /Users/svaldez/railsApps/sebastian-valdez-site/app/assets/stylesheets/pages.scss */
+  ul.banner-social-buttons > li {
+    display: block;
+    margin-bottom: 20px;
+    padding: 0;
+  }
+
+  /* line 218, /Users/svaldez/railsApps/sebastian-valdez-site/app/assets/stylesheets/pages.scss */
+  ul.banner-social-buttons > li:last-child {
+    margin-bottom: 0;
+  }
+
+  /* line 222, /Users/svaldez/railsApps/sebastian-valdez-site/app/assets/stylesheets/pages.scss */
+  .animated-msg-container {
+    font-size: 2em;
+  }
+}
