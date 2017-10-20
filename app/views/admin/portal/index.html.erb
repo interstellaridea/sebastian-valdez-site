@@ -1,20 +1,24 @@
-<h1>Portal#index</h1>
-<p>Find me in app/views/portal/index.html.erb</p>
+<div id='portfolio-items-uploader' class="container">
+	<h1>Admin Portfolio Items Editor</h1>
+	<small>Here you can upload a resume or a new Profile picture</small>
 
-<div class="container">
-	<div class="d-flex">
-		<div class="col align-self-center">
-			<%= form_with url: admin_upload_resume_path do |f| %>
+		<div class="row">
+			<div class="col justify-items-center">
+				<%= form_with model: @resume, url: admin_upload_resume_path do |f| %>
+					<div class="form-group">
+						<%= f.text_field :version, placeholder: 'Resume Version', class: 'form-control' %>
+					</div>
 
-				<div class="form-group">
-					<label class="btn btn-primary">
-					<%= fa_icon 'paperclip', text: ' Attach new resume to upload'%>
-					<%= f.file_field :resume, style: 'display:none;' %>
-					</label>
-				</div>
-				<%= f.submit 'Upload', class: 'btn btn-info' %>
+					<div class="form-group">
+						<label class="btn btn-primary">
+						<%= fa_icon 'paperclip', text: ' Attach new resume to upload'%>
+						<%= f.file_field :location, style: 'display:none;' %>
+						</label>
+					</div>
 
-				<% end %>
+					<%= f.submit 'Upload', class: 'btn btn-info' %>
+
+					<% end %>
+			</div>
 		</div>
-	</div>
 </div>

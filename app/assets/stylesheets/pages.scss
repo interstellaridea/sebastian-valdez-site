@@ -6,8 +6,8 @@
 
 
 .intro-header {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 33px;
+  padding-bottom: 33px;
   text-align: center;
   color: #f8f8f8;
 }
@@ -15,13 +15,7 @@
 .intro-message {
   position: relative;
   padding-top: 20%;
-  padding-bottom: 20%;
-}
-
-.intro-message>h1 {
-  margin: 0;
-  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
-  font-size: 5em;
+  padding-bottom: 5%;
 }
 
 .intro-divider {
@@ -55,6 +49,11 @@ p.copyright {
   h2 {
     font-weight: 200;
   }
+}
+
+
+.intro-text {
+  font-size: 1.2em;
 }
 
 #hobbies {
