@@ -5,4 +5,4 @@ My personal site.
 
 all TODOs in issues
 
-[Persional Site](https://sebastian-valdez.com)
+[Personal Site](https://sebastian-valdez.com)
