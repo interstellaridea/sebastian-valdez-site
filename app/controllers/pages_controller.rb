@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
   def home
     @message = Message.new
+    @current_resume = Resume.last
   end
 
   def about_me
@@ -16,10 +17,13 @@ class PagesController < ApplicationController
   end
 
   def download_resume
+    @current_resume = Resume.last
     send_file(
-    "#{Rails.root}/public/resume.pdf",
-    filename: "SebastianValdez_Resume.pdf",
-    type: "application/pdf"
+      @current_resume.location.path,
+      filename: "SebastianValdez_Resume.pdf",
+      type: 'application/pdf',
+      disposition: 'attachment',
+      url_based_filename: true
     )
   end
   private

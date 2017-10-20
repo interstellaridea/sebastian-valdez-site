@@ -9,9 +9,6 @@
         <a href="#intro-of-me">About</a>
       </li>
       <li class="footer-menu-divider list-inline-item">&sdot;</li>
-<!--       <li class="list-inline-item">
-        <a href="#services">Blog</a>
-      </li> -->
       <hr>
       <ul class="list-inline text-center">
       <li class="list-inline-item text-center">
@@ -25,7 +22,7 @@
 
       </li>
       <li class="list-inline-item text-center">
-        <%= link_to fa_icon('download', text: tag(:br) + content_tag(:span, 'Resume').html_safe, class: 'fa-3x'), download_resume_path  %>
+        <%= link_to fa_icon('download', text: tag(:br) + content_tag(:span, 'Resume').html_safe, class: 'fa-3x'), action: 'download_resume' %> 
       </li>
       </ul>
     </ul>
