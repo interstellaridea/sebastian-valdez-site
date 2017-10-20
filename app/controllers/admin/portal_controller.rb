@@ -3,6 +3,5 @@ class Admin::PortalController < ApplicationController
   end
 
   def upload_resume
-  	binding.pry
   end
 end
