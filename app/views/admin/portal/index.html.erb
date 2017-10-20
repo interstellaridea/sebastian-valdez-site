@@ -1,2 +1,20 @@
 <h1>Portal#index</h1>
 <p>Find me in app/views/portal/index.html.erb</p>
+
+<div class="container">
+	<div class="d-flex">
+		<div class="col align-self-center">
+			<%= form_with url: admin_upload_resume_path do |f| %>
+
+				<div class="form-group">
+					<label class="btn btn-primary">
+					<%= fa_icon 'paperclip', text: ' Attach new resume to upload'%>
+					<%= f.file_field :resume, style: 'display:none;' %>
+					</label>
+				</div>
+				<%= f.submit 'Upload', class: 'btn btn-info' %>
+
+				<% end %>
+		</div>
+	</div>
+</div>
