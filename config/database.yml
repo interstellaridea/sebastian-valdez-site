@@ -1,19 +1,24 @@
 
+#custom databasa config
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see Rails configuration guide
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
-  adapter: postgresql
+  <<: *default
   database: sebastian-valdez-site_development
-  pool: 5
-  timeout: 5000
+
 
 test:
-  adapter: postgresql
-  database: sebastian-valdez-site_development
-  pool: 5
-  timeout: 5000
+  <<: *default
+  database: sebastian-valdez-site_test
 
 production:
-  adapter: postgresql
-  database: sebastian-valdez-site_development
-  pool: 5
-  timeout: 500
+  <<: *default
+  database: sebastian-valdez-site_production
+  username: sebastian-valdez-site
+  password: <%= ENV['SEBASTIAN-VALDEZ-SITE_DATABASE_PASSWORD'] %>
