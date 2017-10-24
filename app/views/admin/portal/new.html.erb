@@ -1,0 +1,20 @@
+<div id='portfolio-items-uploader' class="container">
+	<h2>Uploader</h2>
+	<hr>
+	<div class="row justify-content-center">
+		<%= form_for(@user_items, url: admin_portals_path, remote: true) do |f| %>
+
+		<div class="form-group">
+			<%= f.label :profile_picture %>
+			<%= f.file_field :profile_picture, class: 'form-control-file' %>
+		</div>		
+		
+		<div class="form-group">
+			<%= f.label :resume %>
+			<%= f.file_field :resume, class: 'form-control-file' %>
+		</div>
+		
+		<%= f.submit 'Add items to Profile', class: 'btn btn-secondary btn-block' %>
+		<% end %>
+	</div>
+</div>

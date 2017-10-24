@@ -1,24 +1,25 @@
 <div id='portfolio-items-uploader' class="container">
-	<h1>Admin Portfolio Items Editor</h1>
-	<small>Here you can upload a resume or a new Profile picture</small>
-
-		<div class="row">
-			<div class="col justify-items-center">
-				<%= form_with model: @resume, url: admin_upload_resume_path do |f| %>
-					<div class="form-group">
-						<%= f.text_field :version, placeholder: 'Resume Version', class: 'form-control' %>
-					</div>
-
-					<div class="form-group">
-						<label class="btn btn-primary">
-						<%= fa_icon 'paperclip', text: ' Attach new resume to upload'%>
-						<%= f.file_field :location, style: 'display:none;' %>
-						</label>
-					</div>
-
-					<%= f.submit 'Upload', class: 'btn btn-info' %>
-
-					<% end %>
+	<div class="row justify-content-center mb-4">
+		<% unless @traits.empty? %>
+			<% @traits.each do |t| %>
+				<ul class="list-group">
+					<li class="list-group-item">
+						<%= image_tag t.profile_picture, class: 'img-responsive', width: '50%' %>		
+					</li>
+					<li class="list-group-item">
+						<%= t.resume %>
+					</li>
+				</ul>
+			<% end %>
+		<% else %>
+			<div class="text-center">
+				<h3>You dont have any Traits!</h3>
+				<p>Add some!</p>
 			</div>
-		</div>
+		<% end %>
+	</div>
+	<div class="row">
+		<%= link_to "Upload new Trait Items", admin_add_traits_path, class: 'btn btn-info btn-block' %>
+	</div>
+	</div>
 </div>
