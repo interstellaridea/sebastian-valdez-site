@@ -23,3 +23,11 @@
 //= require lib/rails.validations.custom.js
 //= require sweetalert2
 //= require_tree .
+
+$(document).on('ready turbolinks:load', function(){
+
+	$(".alert").fadeTo(2000, 500).slideUp(500, function(){
+	    $(".alert").slideUp(500);
+	});
+	
+});
