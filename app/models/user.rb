@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
          
-  has_many :traits
+  has_many :traits, dependent: :destroy
 
 	# accepts_nested_attributes_for :traits
 
