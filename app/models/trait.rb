@@ -3,5 +3,5 @@ class Trait < ApplicationRecord
   validates_presence_of :resume, :profile_picture
   
   mount_uploader :resume, ResumeUploader
-  mount_uploader :profile_picture, ResumeUploader
+  mount_uploader :profile_picture, ProfilePictureUploader
 end
