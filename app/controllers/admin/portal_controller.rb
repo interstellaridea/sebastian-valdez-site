@@ -1,7 +1,5 @@
 class Admin::PortalController < ApplicationController
-
-	# instead go to user path devise and be able to upload traits
-
+  before_action :authenticate_user!
 
   def index
   	@traits = Trait.all
@@ -12,7 +10,6 @@ class Admin::PortalController < ApplicationController
   end
 
   def create
-    binding.pry
   	@user_items = Trait.new(trait_params)
   	@user_items.user_id = current_user.id
   	if @user_items.valid?
