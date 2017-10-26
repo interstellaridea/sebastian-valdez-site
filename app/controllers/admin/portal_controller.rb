@@ -23,15 +23,12 @@ class Admin::PortalController < ApplicationController
   end
 
   def edit
-  	
   end
 
   def update
-  	
   end
 
   def destroy
-  	
   end
 
 
@@ -45,8 +42,4 @@ class Admin::PortalController < ApplicationController
   def set_user
   	@traits = Trait.find(current_user.id)
   end
-
-
-
-
 end
