@@ -2,11 +2,11 @@ class ResumeUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
-  # include CarrierWave::MiniMagick
-
+  include CarrierWave::MiniMagick
   # Choose what kind of storage to use for this uploader:
   storage :file
   # storage :fog
+
 
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
@@ -14,20 +14,27 @@ class ResumeUploader < CarrierWave::Uploader::Base
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
 
-  # Provide a default URL as a default if there hasn't been a file uploaded:
-  # def default_url(*args)
-  #   # For Rails 3.1+ asset pipeline compatibility:
-  #   # ActionController::Base.helpers.asset_path("fallback/" + [version_name, "default.png"].compact.join('_'))
-  #
-  #   "/images/fallback/" + [version_name, "default.png"].compact.join('_')
-  # end
 
-  # Process files as they are uploaded:
-  # process scale: [200, 300]
-  #
-  # def scale(width, height)
-  #   # do something
-  # end
+  version :jpg_preview do
+    
+    process :convert_to_image
+    
+    def full_filename(for_file)
+      super(for_file).chomp(File.extname(super(for_file))) + '.jpg'
+    end
+
+    def convert_to_image
+      image = MiniMagick::Image.open(self.current_path)
+      image.format "jpg"
+      image.resize "500x500"
+      image.write current_path
+    end
+  end
+
+   def set_content_type_jpg(*args)
+    self.file.instance_variable_set(:@content_type, "image/jpg")
+  end
+
 
   # Create different versions of your uploaded files:
   # version :thumb do
@@ -39,11 +46,5 @@ class ResumeUploader < CarrierWave::Uploader::Base
   def extension_whitelist
     %w(jpg jpeg gif png pdf)
   end
-
-  # Override the filename of the uploaded files:
-  # Avoid using model.id or version_name here, see uploader/store.rb for details.
-  # def filename
-  #   "something.jpg" if original_filename
-  # end
 
 end
