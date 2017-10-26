@@ -1,5 +1,6 @@
 class Admin::PortalController < ApplicationController
   before_action :authenticate_user!
+  access admin: :all
 
   def index
   	@user_items = current_user.traits

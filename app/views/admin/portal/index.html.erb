@@ -6,8 +6,8 @@
 		<%= link_to "Upload new Trait Items", admin_add_traits_path, class: 'btn btn-info btn-block' %>
 	</div>
 	<div class="row justify-content-center  match-height mb-4">
-		<% unless @traits.empty? %>
-			<% @traits.each do |t| %>
+		<% unless @user_items.empty? %>
+			<% @user_items.each do |t| %>
 
 				<div class="card text-center">
 
@@ -18,6 +18,10 @@
 					<div class="card-block">
 						Resume:
 						<%= link_to "#{t.resume.to_s.split('/')[-1]}", "#", data: { toggle: 'modal', target: "##{t.id}_modal"}, class: 'btn' %>
+					</div>
+
+					<div class="card-block">
+						<%= link_to "Delete", admin_portal_path(t), method: :delete if logged_in?(:admin) %>
 					</div>
 	
 									<!-- TODO, add status for images, so that the render on the home page. -->

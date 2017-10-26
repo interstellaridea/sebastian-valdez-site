@@ -13,9 +13,9 @@
           <a class="nav-link" href="#contact-me">Contact</a>
         </li>
         <% if current_user %>
-        <li class="nav-item">
-          <%= link_to fa_icon('cogs', text: "Admin Portal"), admin_portal_path , class: 'nav-link' %>
-        </li>
+          <li class="nav-item">
+            <%= link_to fa_icon('cogs', text: "Admin Portal"), admin_portals_path , class: 'nav-link' if logged_in?(:admin) %>
+          </li>
           <li class="nav-item">
             <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'nav-link' %>
           </li>
