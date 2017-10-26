@@ -1,15 +1,57 @@
+
 <div id='portfolio-items-uploader' class="container">
-	<div class="row justify-content-center mb-4">
+<h1>Admin Portal Items:</h1>
+<hr>
+	<div class="row pb-4">
+		<%= link_to "Upload new Trait Items", admin_add_traits_path, class: 'btn btn-info btn-block' %>
+	</div>
+	<div class="row justify-content-center  match-height mb-4">
 		<% unless @traits.empty? %>
 			<% @traits.each do |t| %>
-				<ul class="list-group">
-					<li class="list-group-item">
-						<%= image_tag t.profile_picture, class: 'img-responsive', width: '50%' %>		
-					</li>
-					<li class="list-group-item">
-						<%= t.resume %>
-					</li>
-				</ul>
+
+				<div class="card text-center">
+
+					<div class="card-header">
+						<%= image_tag t.profile_picture.small, class: 'mb-3 ' %>
+					</div>
+
+					<div class="card-block">
+						Resume:
+						<%= link_to "#{t.resume.to_s.split('/')[-1]}", "#", data: { toggle: 'modal', target: "##{t.id}_modal"}, class: 'btn' %>
+					</div>
+	
+									<!-- TODO, add status for images, so that the render on the home page. -->
+
+					<div class="card-footer text-muted">
+						Created: <%= time_ago_in_words(t.created_at) %>
+					</div>
+				</div>
+
+					<!-- Modal -->
+					<div class="modal fade bd-example-modal-lg" id='<%= "#{t.id}_modal" %>' tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+					  <div class="modal-dialog modal-lg">
+					    <div class="modal-content text-center">
+					       <div class="modal-header">
+					        <h5 class="modal-title" id="exampleModalLabel">
+										Resume Snapshot: <br>
+										<p>Uploaded: <%= time_ago_in_words(t.created_at) %></p>
+					        </h5>
+					        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					          <span aria-hidden="true">&times;</span>
+					        </button>
+					      </div>
+
+					      <div class="modal-body">
+					        <%= image_tag t.resume.jpg_preview, class: 'img-responsive' %>
+					      </div>
+
+					      <div class="modal-footer">
+					        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+					<!-- Modal end -->
 			<% end %>
 		<% else %>
 			<div class="text-center">
@@ -17,9 +59,5 @@
 				<p>Add some!</p>
 			</div>
 		<% end %>
-	</div>
-	<div class="row">
-		<%= link_to "Upload new Trait Items", admin_add_traits_path, class: 'btn btn-info btn-block' %>
-	</div>
 	</div>
 </div>

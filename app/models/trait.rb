@@ -4,4 +4,5 @@ class Trait < ApplicationRecord
   
   mount_uploader :resume, ResumeUploader
   mount_uploader :profile_picture, ProfilePictureUploader
+
 end

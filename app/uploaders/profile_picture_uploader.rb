@@ -29,6 +29,22 @@ class ProfilePictureUploader < CarrierWave::Uploader::Base
   #   # do something
   # end
 
+
+  # version :thumbnail_img do
+  #   process :create_thumbnail
+  # # end
+  version :small do
+    process :create_thumbnail
+  end 
+
+  def create_thumbnail
+    image = MiniMagick::Image.open(current_path)
+    image.path
+    image.format "png"
+    image.resize "150x150"
+    image.write current_path
+  end
+
   # Create different versions of your uploaded files:
   # version :thumb do
   #   process resize_to_fit: [50, 50]
