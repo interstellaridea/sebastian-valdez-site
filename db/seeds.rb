@@ -10,5 +10,17 @@ User.create!(
 	phone: '4152994331',
 	email: 'seb@test.com',
 	password: 'asdfasdf',
+	password_confirmation: 'asdfasdf',
+	role: 'admin'
+)
+puts "admin created!\n"
+
+User.create!(
+	name: 'Joe Shmoe',
+	phone: '5552224343',
+	email: 'user@test.com',
+	password: 'asdfasdf',
 	password_confirmation: 'asdfasdf'
 )
+
+puts "user created"
