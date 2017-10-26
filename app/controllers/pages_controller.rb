@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
   def home
     @message = Message.new
-    @current_resume = Resume.last
+    @admin_traits = Trait.admin_posts.first
   end
 
   def about_me
@@ -16,18 +16,18 @@ class PagesController < ApplicationController
     end
   end
 
-  def download_resume
-   cookies['fileDownload'] = 'true'
+  # def download_resume
+  #  cookies['fileDownload'] = 'true'
 
-    @current_resume = Resume.last
-    send_file(
-      @current_resume.location.path,
-      filename: "SebastianValdez_Resume.pdf",
-      type: 'application/pdf',
-      disposition: 'attachment',
-      x_sendfile: true
-    )
-  end
+  #   @current_resume = Resume.last
+  #   send_file(
+  #     @current_resume.location.path,
+  #     filename: "SebastianValdez_Resume.pdf",
+  #     type: 'application/pdf',
+  #     disposition: 'attachment',
+  #     x_sendfile: true
+  #   )
+  # end
   private
   def message_params
     params.require(:message).permit(

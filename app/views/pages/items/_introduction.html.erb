@@ -4,7 +4,7 @@
     <hr>
       <div class="row text-center">
         <div class="col-md-4">
-          <%= image_tag("profile", alt: "Me", id: "profile-pic", class: 'img-fluid') %>
+          <%= image_tag @admin_traits.profile_picture, alt: "Me", id: "profile-pic", class: 'img-fluid' %>
           <li id='intro-resume-download-btn' class="list-unstyled btn btn-info btn-block jquery-download">
             <%= link_to fa_icon('download', text: 'Resume'), download_resume_path %> 
           </li>
