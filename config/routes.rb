@@ -2,8 +2,7 @@ Rails.application.routes.draw do
 
 	devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout' }, skip: [:registrations]
 	namespace :admin do
-			resource :portals, except: [:index, :new, :edit], controller: 'portal'
-			get 'portal', to: 'portal#index'
+			resources :portals, except: [:new], controller: 'portal'
 			get 'add-traits', to: 'portal#new'
 	end
   get  'download_resume', to: 'pages#download_resume'
