@@ -13,6 +13,13 @@
 
 					<div class="card-header">
 						<%= image_tag t.profile_picture.small, class: 'mb-3 ' %>
+						<div class="clearfix"></div>
+						<div id="current-picture">
+							<%= determine_trait_status_helper(t) %>
+
+							<%#= link_to 'Make Live', admin_toggle_status_path(t), class: 'btn' %>
+							<%#= link_to 'Turn Off', admin_toggle_status_path(t), class: 'btn' %>
+						</div>
 					</div>
 
 					<div class="card-block">
