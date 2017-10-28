@@ -13,7 +13,7 @@ module PagesHelper
 
 	def footer_resume_helper item
 		if item.respond_to? :resume
-      content_tag(:li, class: 'list-inline-item text-center') do
+      content_tag(:li, class: 'list-inline-item text-center jquery-download') do
       	link_to(
       		fa_icon('download', text: tag(:br) + content_tag(:span, 'Resume').html_safe, class: 'fa-3x'),
       		download_resume_path)
