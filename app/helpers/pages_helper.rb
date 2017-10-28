@@ -8,7 +8,17 @@ module PagesHelper
 	end
 
 	def intro_resume_helper item
-		link_to( 'Resume', download_resume_path, class: 'btn btn-info btn-block') if item.respond_to? :resume
+			link_to( 'Resume', download_resume_path, class: 'btn btn-info btn-block') if item.respond_to? :resume
+	end
+
+	def footer_resume_helper item
+		if item.respond_to? :resume
+      content_tag(:li, class: 'list-inline-item text-center') do
+      	link_to(
+      		fa_icon('download', text: tag(:br) + content_tag(:span, 'Resume').html_safe, class: 'fa-3x'),
+      		download_resume_path)
+			end
+		end
 	end
 
 end
