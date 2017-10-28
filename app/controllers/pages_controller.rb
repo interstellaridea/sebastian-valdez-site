@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
   def home
     @message = Message.new
-    @admin_traits = Trait.admin_posts.first
+    @admin_traits = Trait.live_admin_posts.first
   end
 
   def about_me
