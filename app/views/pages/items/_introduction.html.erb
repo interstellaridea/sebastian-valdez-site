@@ -5,8 +5,8 @@
       <div class="row text-center">
         <div class="col-md-4">
           <%= profile_picture_helper @admin_traits %>
-          <li id='intro-resume-download-btn' class="list-unstyled btn btn-info btn-block jquery-download">
-            <%= link_to fa_icon('download', text: 'Resume'), download_resume_path %> 
+          <li id='intro-resume-download-btn' class="list-unstyled jquery-download">
+            <%= resume_helper @admin_traits %>
           </li>
         </div>
         <div class="col-md-8 mt-5">

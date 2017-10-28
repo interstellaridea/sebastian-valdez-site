@@ -7,4 +7,9 @@ module PagesHelper
 		end
 	end
 
+	def resume_helper item
+		link_to( 'Resume', download_resume_path, class: 'btn btn-info btn-block') if item.respond_to? :resume
+
+	end
+
 end
