@@ -16,9 +16,6 @@
 						<div class="clearfix"></div>
 						<div id="current-picture">
 							<%= determine_trait_status_helper(t) %>
-
-							<%#= link_to 'Make Live', admin_toggle_status_path(t), class: 'btn' %>
-							<%#= link_to 'Turn Off', admin_toggle_status_path(t), class: 'btn' %>
 						</div>
 					</div>
 
@@ -30,8 +27,6 @@
 					<div class="card-block">
 						<%= link_to "Delete", admin_portal_path(t), method: :delete if logged_in?(:admin) %>
 					</div>
-	
-									<!-- TODO, add status for images, so that the render on the home page. -->
 
 					<div class="card-footer text-muted">
 						Created: <%= time_ago_in_words(t.created_at) %>
