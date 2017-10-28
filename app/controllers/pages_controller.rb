@@ -1,7 +1,9 @@
 class PagesController < ApplicationController
+  before_action :set_admin_traits, only: [:home, :download_resume]
+
   def home
     @message = Message.new
-    @admin_traits = Trait.live_admin_posts.first
+    @admin_traits
   end
 
   def about_me
@@ -16,24 +18,29 @@ class PagesController < ApplicationController
     end
   end
 
-  # def download_resume
-  #  cookies['fileDownload'] = 'true'
+  def download_resume
+    # binding.pry
+   cookies['fileDownload'] = 'true'
 
-  #   @current_resume = Resume.last
-  #   send_file(
-  #     @current_resume.location.path,
-  #     filename: "SebastianValdez_Resume.pdf",
-  #     type: 'application/pdf',
-  #     disposition: 'attachment',
-  #     x_sendfile: true
-  #   )
-  # end
-  private
-  def message_params
-    params.require(:message).permit(
-                            :name,
-                            :subject,
-                            :sender_email,
-                            :body )
+    send_file(
+      @admin_traits.resume.file.file,
+      filename: "SebastianValdez_Resume.pdf",
+      type: 'application/pdf',
+      disposition: 'attachment',
+      x_sendfile: true
+    )
   end
+
+  private
+    def set_admin_traits
+      @admin_traits = Trait.live_admin_posts.first
+    end
+      
+    def message_params
+      params.require(:message).permit(
+                              :name,
+                              :subject,
+                              :sender_email,
+                              :body )
+    end
 end
