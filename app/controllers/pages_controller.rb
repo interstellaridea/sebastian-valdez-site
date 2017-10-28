@@ -19,15 +19,14 @@ class PagesController < ApplicationController
   end
 
   def download_resume
-    # binding.pry
    cookies['fileDownload'] = 'true'
-
-    send_file(
-      @admin_traits.resume.file.file,
+    data = open( @admin_traits.resume.url )
+    send_data(
+       data.read,
       filename: "SebastianValdez_Resume.pdf",
       type: 'application/pdf',
       disposition: 'attachment',
-      x_sendfile: true
+      buffer_size: '4096'
     )
   end
 
