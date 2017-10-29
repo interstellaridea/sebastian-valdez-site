@@ -1,7 +1,7 @@
 module PagesHelper
 	def profile_picture_helper item
 		unless item.respond_to? :profile_picture
-			fa_icon('user', text: tag(:br) + content_tag(:span, 'profile Picture').html_safe, class: 'fa-3x')
+			fa_icon('user', text: tag(:br) + content_tag(:span, 'Profile Picture').html_safe, class: 'fa-3x')
 		else
 			image_tag(item.profile_picture.url, alt: "Me", id: "profile-pic", class: 'img-fluid')
 		end

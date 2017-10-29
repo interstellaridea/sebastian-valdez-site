@@ -15,7 +15,7 @@ $(document).on('ready turbolinks:load',function(){
 			e.preventDefault();
 			$.fileDownload($(this).find('a').prop('href'),{
 				successCallback: function (url) { swal({ type: 'success', text: 'Thanks for downloading my resume!' }) },
-				failCallback: function (url) { swal({type: 'error', text: 'Opps, couldnt download, try again later'}) }
+				failCallback: function (url) { swal({type: 'error', text: "Sorry, couldn't download, try again later."}) }
 			});
 		});
 
@@ -36,9 +36,9 @@ $(document).on('ready turbolinks:load',function(){
 			swal({
 				type: 'success',
 				title:
-					'Message Successfully sent!',
+					'Message Successfully Sent!',
 				text:
-					'Thanks ' + $('#message_name').val() + ' For reaching out!\n' +
+					'Thanks ' + $('#message_name').val() + ' for reaching out!\n' +
 					"I'll get back to you shortly."
 			}).then(function(){  // AJAX CALLBACK TO CLEAR MESSAGE AND SCOLLTOP
 					after_message_submit();				
@@ -49,7 +49,7 @@ $(document).on('ready turbolinks:load',function(){
 				type: 'error',
 				title: 'Opps!',
 				text:
-					'Sorry we couldnt contact the Mail server!\n' + 
+					"Sorry we couldn't contact the Mail server!\n" + 
 					'Try again later.',
 				timer: 2000,
 				onOpen: function(){
