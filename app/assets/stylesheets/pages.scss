@@ -6,16 +6,22 @@
 
 
 .intro-header {
-  padding-top: 33px;
-  padding-bottom: 33px;
+  // padding-top: 33px;
+  // padding-bottom: 33px;
   text-align: center;
   color: #f8f8f8;
 }
 
 .intro-message {
-  position: relative;
-  padding-top: 20%;
-  padding-bottom: 5%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  // padding-top: 20%;
+  // padding-bottom: 5%;
+}
+#intro-msg-wrapper {
+  position: inherit;
+  text-align: center;
 }
 
 .intro-divider {
@@ -38,8 +44,8 @@ p.copyright {
 // CUSTUSTOM STYLES
 
 #profile-pic {
-  border-radius: 100%;
-  border: 12px solid #DB162F;
+  border-radius: 5px;
+  border: 6px solid #DB162F;
 }
 
 #intro-of-me {
@@ -84,8 +90,8 @@ p.copyright {
   min-width: 100%;
   min-height: 100%;
   position: absolute;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-6%);
+  // -webkit-transform: translateX(-50%) translateY(-50%);
+  // transform: translateX(-50%) translateY(-6%);
   // //background: image-url('home_bg.png') no-repeat;
   // background-size: cover;
 }
@@ -173,53 +179,15 @@ p.copyright {
 
 // MEDIA QUERIES
 
-@media(max-width:1199px) {
-  ul.banner-social-buttons {
-    float: left;
-    margin-top: 15px;
-  }
+@media(max-width: 900px) {
+  .animated-msg-container {
+    font-size: 3em;
+  }  
 }
 
-@media(max-width:767px) {
-  .intro-message {
-    padding-bottom: 15%;
-  }
-  .intro-message>h1 {
-    font-size: 3em;
-  }
-
-  ul.intro-social-buttons>li {
-    display: block;
-    margin-bottom: 20px;
-    padding: 0;
-  }
-
-  ul.intro-social-buttons>li:last-child {
-    margin-bottom: 0;
-  }
-
-  .intro-divider {
-    width: 100%;
-  }
-
-  .banner h2 {
-    margin: 0;
-    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
-    font-size: 3em;
-  }
-
-  ul.banner-social-buttons>li {
-    display: block;
-    margin-bottom: 20px;
-    padding: 0;
-  }
-
-  ul.banner-social-buttons>li:last-child {
-    margin-bottom: 0;
-  }
-  
+@media(max-width: 400px) {
   .animated-msg-container {
-  font-size: 2em;
+    font-size: 1.8em;
   }
 }
 

@@ -1,33 +1,34 @@
-<header class="intro-header">
-
-    <%= video_tag(
+<div class="row">
+  <header class="intro-header embed-responsive embed-responsive-16by9">
+     <%= video_tag(
       'coffee_video.mp4',
       id: 'background-video',
+      class: 'embed-responsive-item',
       autoplay: true,
       loop: true,
       muted: true,
     ) %>
-
-  <div class="container">
-    <div class="intro-message">
-      <p class="animated-msg-container">
-        <span class="animated-msg"></span>
-      </p>      
-      <hr class="intro-divider">
-      <ul class="list-inline intro-social-buttons">
-        <li class="list-inline-item">
-          <a href="https://github.com/interstellaridea" target="_blank" class="btn btn-secondary btn-lg">
-            <i class="fa fa-github fa-fw"></i>
-            <span class="network-name">Github</span>
-          </a>
-        </li>
-        <li class="list-inline-item">
-          <a href="https://www.linkedin.com/in/sebastian-valdez-b5549668/" target="_blank" class="btn btn-secondary btn-lg">
-            <i class="fa fa-linkedin fa-fw"></i>
-            <span class="network-name">Linkedin</span>
-          </a>
-        </li>
-      </ul>
+  </header>
+      <div id="intro-msg-wrapper" class="d-flex flex-column justify-content-center">
+        <div class="intro-message">
+          <p class="animated-msg-container">
+            <span class="animated-msg"></span>
+          </p>      
+          <hr class="intro-divider">
+          <ul class="list-inline intro-social-buttons">
+            <li class="list-inline-item">
+              <a href="https://github.com/interstellaridea" target="_blank" class="btn btn-secondary btn-lg">
+                <i class="fa fa-github fa-fw"></i>
+                <span class="network-name">Github</span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/in/sebastian-valdez-b5549668/" target="_blank" class="btn btn-secondary btn-lg">
+                <i class="fa fa-linkedin fa-fw"></i>
+                <span class="network-name">Linkedin</span>
+              </a>
+            </li>
+          </ul>
+        </div>
     </div>
-  </div>
-</header>
+</div>
