@@ -7,6 +7,9 @@ Rails.application.routes.draw do
 				get 'toggle_status/:id', to: 'portal#toggle_status', as: 'toggle_status'
 
 	end
+
+	resources :blogs
+
   get  'download_resume', to: 'pages#download_resume'
   get 	'about-me',	to: 'pages#about_me'
   post 'contact_me', to: 'pages#contact'
