@@ -11,9 +11,7 @@
 					<div class="card-link"><%= blog.status %></div>
 					<div class="card-block text-center">
 						<div class="btn-group">
-							<% Blog.statuses.each do |option| %>
-								<%= link_to "#{option.first}", "#", class: "btn #{active_blog?(option.first, blog)} btn-sm" %>
-							<% end %>
+							<%= blog_link_generator(blog)%>
 						</div>
 					</div>
 				</div>
