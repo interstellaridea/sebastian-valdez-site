@@ -10,6 +10,16 @@ User.create!(
 puts "admin created!\n"
 
 User.create!(
+	name: 'Allegra',
+	phone: '4152994331',
+	email: 'beebee@test.com',
+	password: 'asdfasdf',
+	password_confirmation: 'asdfasdf',
+	role: 'editor'
+)
+puts "Editor created!\n"
+
+User.create!(
 	name: 'Joe Shmoe',
 	phone: '5552224343',
 	email: 'user@test.com',
