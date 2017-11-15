@@ -1,0 +1,23 @@
+<div class="container">
+	<div class="blog-container d-flex flex-column">
+		<h1><%= @blog.title %></h1>
+		<div class="btn-group">
+			<%= link_to "Back", blogs_path, class: 'btn btn-info btn-sm' %>
+			<%= link_to "Edit", '#', class: 'btn btn-warning btn-sm' %>
+			<%= link_to "Delete", '#', class: 'btn btn-danger btn-sm'%>
+		</div>
+		<hr>
+<!-- make a form group.. for these items -->
+		<div class="align-self-center">
+		<div class="form-group">
+			<div class="label">
+				<%= @blog.status %>
+			</div>
+			<%= @blog.content %>
+		</div>
+		</div>
+
+
+
+	</div>
+</div>
