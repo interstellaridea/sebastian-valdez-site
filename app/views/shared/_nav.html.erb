@@ -12,6 +12,9 @@
         <li class="nav-item">
           <a class="nav-link" href="#contact-me">Contact</a>
         </li>
+        <li class="nav-item">
+          <%= link_to 'Blog', blogs_path, class: 'nav-link' %>
+        </li>
         <% if current_user %>
           <li class="nav-item">
             <%= link_to fa_icon('cogs', text: "Admin Portal"), admin_portals_path , class: 'nav-link' if logged_in?(:admin) %>
