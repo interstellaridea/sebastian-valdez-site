@@ -1,22 +1,25 @@
 <div class="container">
-<h1 class="mt-2">Blogs</h1>
-<hr>
+	<h1 class="mt-2">Blogs</h1>
+	<hr>
 	<div class="blog-container d-flex flex-wrap justify-content-around">
 		<% @blogs.each do |blog| %>
-		<div class="col-md-4">
-			<div class="card">
-				<div class="card-block">
-					<div class="card-title"><%= link_to "#{blog.title}", '#', class: 'lead' %></div>
-					<div class="card-text"><%= blog.content.truncate(100, separator: /\s/) %></div>
-					<div class="card-link"><%= blog.status %></div>
-					<div class="card-block text-center">
-						<div class="btn-group">
-							<%= blog_link_generator(blog)%>
+			<div class="col-md-4">
+				<div class="card">
+					<div class="card-block">
+						<div class="card-title"><%= link_to "#{blog.title}", blog_path(blog), class: 'lead' %></div>
+						<div class="card-text"><%= blog.content.truncate(100, separator: /\s/) %></div>
+						<div class="card-link"><%= blog.status %></div>
+						<div class="card-block text-center">
+							<div class="btn-group d-xl-inline-flex d-lg-none d-md-none d-sm-inline-flex">
+								<%= blog_link_generator(blog)%>
+							</div>
+							<div class="btn-group-vertical d-xl-none d-lg-inline-flex d-md-inline-flex d-xs-none d-none">
+								<%= blog_link_generator(blog)%>
+							</div>
 						</div>
 					</div>
-				</div>
-			</div>		
-		</div>
+				</div>		
+			</div>
 		<% end %>
 	</div>
 </div>
