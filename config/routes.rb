@@ -8,7 +8,11 @@ Rails.application.routes.draw do
 
 	end
 
-	resources :blogs
+	resources :blogs do
+		member do 
+			get 'toggle_status/:state', to: 'blogs#toggle_status', as: 'toggle_status'
+		end
+	end
 
   get  'download_resume', to: 'pages#download_resume'
   get 	'about-me',	to: 'pages#about_me'

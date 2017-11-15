@@ -8,15 +8,16 @@
 					<div class="card-block">
 						<div class="card-title"><%= link_to "#{blog.title}", blog_path(blog), class: 'lead' %></div>
 						<div class="card-text"><%= blog.content.truncate(100, separator: /\s/) %></div>
-						<div class="card-link"><%= blog.status %></div>
-						<div class="card-block text-center">
-							<div class="btn-group d-xl-inline-flex d-lg-none d-md-none d-sm-inline-flex">
-								<%= blog_link_generator(blog)%>
+						<% if logged_in?(:admin,:editor) %>
+							<div class="card-block text-center">
+								<div class="btn-group d-xl-inline-flex d-lg-none d-md-none d-sm-inline-flex">
+									<%= blog_link_generator(blog)%>
+								</div>
+								<div class="btn-group-vertical d-xl-none d-lg-inline-flex d-md-inline-flex d-xs-none d-none">
+									<%= blog_link_generator(blog)%>
+								</div>
 							</div>
-							<div class="btn-group-vertical d-xl-none d-lg-inline-flex d-md-inline-flex d-xs-none d-none">
-								<%= blog_link_generator(blog)%>
-							</div>
-						</div>
+						<% end %>
 					</div>
 				</div>		
 			</div>
