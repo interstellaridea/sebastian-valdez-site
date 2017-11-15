@@ -1,5 +1,5 @@
 class BlogsController < ApplicationController
-	before_action :set_blog, only: [ :show, :toggle_status ]
+	before_action :set_blog, only: [ :show, :destroy, :toggle_status ]
 
 	def index
 		@blogs = Blog.all
@@ -22,6 +22,11 @@ class BlogsController < ApplicationController
 		else
 			render :new
 		end
+	end
+
+	def destroy
+		@blog.destroy!
+			redirect_to blogs_path, notice: 'Successfully deleted the blog.'
 	end
 
 	def toggle_status
