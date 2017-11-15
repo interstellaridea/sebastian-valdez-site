@@ -1,5 +1,6 @@
 <div class="container">
 	<h1 class="mt-2">Blogs</h1>
+	<%= link_to 'New Blog', new_blog_path, class: 'btn btn-primary' if logged_in? :admin %>
 	<hr>
 	<div class="blog-container d-flex flex-wrap justify-content-around">
 		<% @blogs.each do |blog| %>
