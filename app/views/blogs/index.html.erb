@@ -7,7 +7,7 @@
 			<div class="col-md-8 mx-auto">
 				<div class="card">
 					<div class="card-block">
-						<h2 class="card-title"><%= link_to "#{blog.title}", '#' %></h2>
+						<h2 class="card-title"><%= link_to "#{blog.title}", blog_path(blog) %></h2>
 						<h6 class="card-subtitle mt-2 text-muted"><%= blog.subtitle %></h6>
 					</div>
 					<div class="card-footer text-muted">

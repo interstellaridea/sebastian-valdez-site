@@ -3,7 +3,7 @@
 		<h1><%= @blog.title %></h1>
 		<div class="btn-group">
 			<%= link_to "Back", blogs_path, class: 'btn btn-info btn-sm' %>
-			<%= link_to "Edit", '#', class: 'btn btn-warning btn-sm' %>
+			<%= link_to "Edit", edit_blog_path(@blog), class: 'btn btn-warning btn-sm' if logged_in?(:admin, :editor)  %>
 			<%= link_to "Delete", blog_path(@blog), method: :delete, class: 'btn btn-danger btn-sm' if logged_in? :admin %>
 		</div>
 		<hr>
