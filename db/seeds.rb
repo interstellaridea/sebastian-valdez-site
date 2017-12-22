@@ -34,6 +34,7 @@ puts "user created"
 20.times do |blog|
 	Blog.create!(
 		title: "Blog_title_#{blog}",
+		subtitle: "Cool subtitle #{blog}",
 		content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil eveniet nobis quibusdam eos beatae voluptates dignissimos iusto, voluptatem soluta magnam velit adipisci nostrum. Dolorem tempore laborum sapiente eos porro quae!'
 	)
 end
