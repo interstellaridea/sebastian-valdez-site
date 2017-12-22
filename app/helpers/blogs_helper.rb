@@ -1,11 +1,8 @@
 module BlogsHelper
 
-	def blog_link_generator blog
-		states = Blog.statuses.keys
-		if logged_in? :editor
-			states.delete_if{ |state| state =~ /draft|published/ }
-		end
-		states.map{|state| link_to "#{state}", toggle_status_blog_path(blog,state), class: "btn btn-sm #{blog_status?(blog, state)}" }.join.html_safe
+	def blog_status_button blog
+		# render a group of buttons, set active button from giveing status
+		Blog.statuses.keys.map{|state| link_to state, toggle_status_blog_path(blog, state), class: "btn btn-xs #{blog_status?(blog, state)}" }.join.html_safe
 	end
 
 	def blog_status? blog, state
