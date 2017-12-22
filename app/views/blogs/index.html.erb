@@ -7,17 +7,14 @@
 			<div class="col-md-8 mx-auto">
 				<div class="card">
 					<div class="card-block">
-						<div class="card-title">
-							<h3>
-								<%= link_to "#{blog.title}", '#' %>
-							</h3>
-						</div>
+						<h2 class="card-title"><%= link_to "#{blog.title}", '#' %></h2>
+						<h6 class="card-subtitle mt-2 text-muted"><%= blog.subtitle %></h6>
 					</div>
 					<div class="card-footer text-muted">
 						<span>
 							<%= "#{time_ago_in_words(blog.updated_at)} ago" %>
 						</span>
-						<% if logged_in? :admin, :editor %>
+						<% if logged_in?(:admin, :editor) %>
 							<div class="btn-group btn-group-sm float-right" role="group" aria-label="Basic example">
 								<%= blog_status_button blog %>
 							</div>
