@@ -1,5 +1,5 @@
 class BlogsController < ApplicationController
-	before_action :set_blog, only: [ :show, :destroy, :toggle_status ]
+	before_action :set_blog, only: [ :show, :edit, :update, :destroy, :toggle_status ]
 
 	def index
 		if logged_in? :admin
@@ -9,10 +9,6 @@ class BlogsController < ApplicationController
 		else
 			@blogs = Blog.published.recent
 		end
-	end
-
-	def show
-		@blog = Blog.find(params[:id])
 	end
 
 	def new
@@ -30,9 +26,24 @@ class BlogsController < ApplicationController
 		end
 	end
 
+	def show
+	end
+
+	def edit
+	end
+
+  def update
+    respond_to do |format|
+      if @blog.update(blog_params)
+        format.html { redirect_to @blog, notice: 'Blog was successfully updated.' }
+      else
+        format.html { render :edit }
+      end
+    end
+  end
 	def destroy
 		@blog.destroy!
-			redirect_to blogs_path, notice: 'Successfully deleted the blog.'
+		redirect_to blogs_path, notice: 'Successfully deleted the blog.'
 	end
 
 	def toggle_status
@@ -59,6 +70,6 @@ class BlogsController < ApplicationController
 		end
 
 		def blog_params
-			params.require(:blog).permit(:title, :content)
+			params.require(:blog).permit(:title, :subtitle, :content)
 		end
 end
