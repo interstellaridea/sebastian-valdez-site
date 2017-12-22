@@ -2,7 +2,13 @@ class BlogsController < ApplicationController
 	before_action :set_blog, only: [ :show, :destroy, :toggle_status ]
 
 	def index
-		@blogs = Blog.all
+		if logged_in? :admin
+			@blogs = Blog.all
+		elsif logged_in? :editor
+			@blogs = Blog.pending_editor_approval
+		else
+			@blogs = Blog.published.recent
+		end
 	end
 
 	def show
