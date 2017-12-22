@@ -32,9 +32,15 @@ class BlogsController < ApplicationController
 	def edit
 	end
 
+	def set_pendng_to_approved blog
+		# TODO
+		# where if an edit action is complete prompt editor if they would like to make approved
+  end
+
   def update
     respond_to do |format|
       if @blog.update(blog_params)
+      	# set_edits_to_pending @blog
         format.html { redirect_to @blog, notice: 'Blog was successfully updated.' }
       else
         format.html { render :edit }
