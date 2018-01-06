@@ -49,7 +49,7 @@ class BlogsController < ApplicationController
     end
   end
 	def destroy
-		@blog.destroy!
+		@blog.destroy
 		redirect_to blogs_path, notice: 'Successfully deleted the blog.'
 	end
 
@@ -77,6 +77,6 @@ class BlogsController < ApplicationController
 		end
 
 		def blog_params
-			params.require(:blog).permit(:title, :subtitle, :content)
+			params.require(:blog).permit(:title, :subtitle, :content, :photo)
 		end
 end
